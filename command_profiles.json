@@ -1,0 +1,48 @@
+{
+  "🔍 Quick Scans": {
+    "🔎 Search All (HF+LF)": "hf search; lf search",
+    "📡 HF ISO14443A Scan": "hf 14a reader",
+    "📻 LF EM410x Scan": "lf em 410x reader",
+    "🎴 MIFARE Classic Info": "hf 14a info",
+    "🔑 T55xx Detect": "lf t55xx detect"
+  },
+
+  "🔐 MIFARE Operations": {
+    "🔓 MIFARE Autopwn": "hf mf autopwn",
+    "📥 MIFARE Dump": "hf mf dump",
+    "📝 MIFARE Read Block 0": "hf mf rdbl --blk 0",
+    "🔒 MIFARE Check Keys": "hf mf chk",
+    "📋 MIFARE Nested Attack": "hf mf nested"
+  },
+
+  "🏷️ EM410x / T5577": {
+    "📖 EM410x Read": "lf em 410x reader",
+    "💾 EM410x Clone to T5577": "lf em 410x clone --id {UID}",
+    "🔍 T55xx Info": "lf t55xx info",
+    "📥 T55xx Dump": "lf t55xx dump",
+    "🔧 T55xx Wipe": "lf t55xx wipe"
+  },
+
+  "📊 Hardware Tools": {
+    "📈 Tune Antenna (HF)": "hw tune",
+    "📉 Tune Antenna (LF)": "hw tune lf",
+    "ℹ️ Hardware Info": "hw status",
+    "🔋 Check Version": "hw version",
+    "⚙️ Show Capabilities": "hw capabilities"
+  },
+
+  "🎯 Advanced Operations": {
+    "📡 HF Sniff": "hf 14a sniff",
+    "📻 LF Sniff": "lf sniff",
+    "📋 HF List Trace": "hf list",
+    "📊 LF List Trace": "lf list",
+    "🔬 Data Analysis": "data plot"
+  },
+
+  "🛡️ Security Testing": {
+    "🔐 Darkside Attack": "hf mf darkside",
+    "⚡ Static Nested": "hf mf static",
+    "🎭 Hardnested": "hf mf hardnested",
+    "🔑 Dictionary Attack": "hf mf chk --1k"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "app": {
+    "name": "🔥 CyberNinjaRFID",
+    "version": "v1.0.0",
+    "theme": "cyber_ninja_dark"
+  },
+  "connection": {
+    "auto_scan_on_startup": true,
+    "default_port": "",
+    "reconnect_attempts": 3,
+    "timeout_seconds": 5
+  },
+  "ui": {
+    "max_output_lines": 1000,
+    "font_family": "Consolas",
+    "font_size": 10,
+    "enable_emojis": true,
+    "auto_scroll": true
+  },
+  "colors": {
+    "background": "#0a0e27",
+    "foreground": "#00d4ff",
+    "accent": "#00ffff",
+    "border": "#00d4ff",
+    "error": "#ff0055",
+    "warning": "#ffaa00",
+    "success": "#00d4ff"
+  },
+  "paths": {
+    "pm3_client": "../proxmark3/client/proxmark3.exe",
+    "scripts_dir": "../proxmark3/client/luascripts",
+    "python_scripts_dir": "../proxmark3/client/pyscripts",
+    "logs_dir": "./logs"
+  },
+  "quick_commands": {
+    "hw": [
+      {"label": "📊 HW Version", "command": "hw version"},
+      {"label": "📡 HW Status", "command": "hw status"},
+      {"label": "📈 HW Tune", "command": "hw tune"}
+    ],
+    "hf": [
+      {"label": "🔍 HF Search", "command": "hf search"},
+      {"label": "💳 HF 14a Reader", "command": "hf 14a reader"},
+      {"label": "🔐 HF MF Autopwn", "command": "hf mf autopwn"}
+    ],
+    "lf": [
+      {"label": "🔍 LF Search", "command": "lf search"},
+      {"label": "🎫 LF EM Reader", "command": "lf em 410x reader"},
+      {"label": "🔑 LF T55xx Detect", "command": "lf t55xx detect"}
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "file_max_bytes": 10485760,
+    "backup_count": 5
+  }
+}

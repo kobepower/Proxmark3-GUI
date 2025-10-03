@@ -1,0 +1,5 @@
+# CyberNinjaRFID Requirements
+# GUI for Proxmark3 Iceman Firmware
+
+PyQt5>=5.15.0
+pyserial>=3.5
