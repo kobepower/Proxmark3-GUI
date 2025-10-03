@@ -1,0 +1,70 @@
+🏢 Condo Fob Cloning Flowchart (Proxmark3 + Iceman)
+
+START → CMD: `lf search`
+
+---
+
+**If result = EM410x / EM4x →**
+
+* CMD: `lf em410x reader`
+* Clone: `lf em410x clone --to t55xx`
+* Verify: `lf search`
+
+---
+
+**If result = HID Prox →**
+
+* CMD: `lf hid reader`
+* Note FC + CN
+* Clone: `lf hid clone --fc <facility> --cn <cardnum>`
+* Verify: `lf hid reader`
+
+---
+
+**If result = Indala →**
+
+* CMD: `lf indala reader`
+* Note Raw / FC+CN / Printed (Heden)
+
+  **Method 1 (Raw):**
+
+  * `lf t55xx wipe`
+  * `lf indala clone -r <rawhex>`
+  * `lf search`
+
+  If FAIL → **Method 2 (FC/CN):**
+
+  * `lf t55xx wipe`
+  * `lf indala clone --fc <facility> --cn <cardnum>`
+  * `lf search`
+
+  If FAIL → **Method 3 (Heden):**
+
+  * `lf t55xx wipe`
+  * `lf indala clone --heden <printedID>`
+  * `lf search`
+
+---
+
+**Dump & Restore (when to use)**
+
+* Use when:
+
+  * You want a full backup before wiping/writing.
+  * The system uses encrypted/non-standard data.
+  * You want to analyze or emulate later.
+
+**Commands:**
+
+* Dump original tag to file:  `lf t55xx dump mytag.bin`
+* Restore onto blank:        `lf t55xx restore mytag.bin`
+* Simulate from dump:        `lf sim mytag.bin`
+
+---
+
+**If none of the above work →**
+
+* System may use diversified/encrypted format.
+* Requires advanced attack (beyond simple clone).
+
+END

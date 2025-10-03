@@ -148,8 +148,14 @@ class PM3ProxSpace:
             logger.info(f"📥 Stderr length: {len(errors)} chars")
             logger.info(f"📥 Total output length: {len(full_output)} chars")
 
-            # Log the actual error for debugging
-            if process.returncode != 0:
+            # Handle return codes
+            # Return code 127 with output means command executed but bash wrapper had issues
+            # Treat as success if we got valid PM3 output
+            is_success = process.returncode == 0
+            if process.returncode == 127 and full_output and '[+]' in full_output:
+                logger.info(f"⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)")
+                is_success = True
+            elif process.returncode != 0:
                 logger.error(f"❌ Return code {process.returncode} - Command failed!")
                 if errors:
                     logger.error(f"❌ FULL Stderr: {errors}")
@@ -161,7 +167,7 @@ class PM3ProxSpace:
                 preview = full_output[:500].replace('\n', ' ')
                 logger.info(f"📥 Preview: {preview}...")
 
-            return process.returncode == 0
+            return is_success
 
         except Exception as e:
             error_msg = f"❌ Command failed: {str(e)}"

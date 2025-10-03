@@ -1,0 +1,102 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1.5in} % Increased margins for more spacing
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{DejaVuSans} % Reliable font
+
+\begin{document}
+
+\title{Proxmark Advanced Troubleshooting Cheat Sheet}
+\author{}
+\date{}
+\maketitle
+
+\section*{Quick Decision Flow}
+\begin{itemize}
+    \item \textbf{hw tune}
+    \item \textbf{lf search} (checks 125 kHz / LF tags) \newline If found: follow LF path
+    \item If nothing or unclear: \textbf{hf search} (checks 13.56 MHz / HF tags) \newline If HF found: follow HF path
+\end{itemize}
+
+\section*{LF (125 kHz) — Common Outputs \& Commands}
+\begin{center}
+\begin{tabular}{p{4cm} p{6cm} p{5cm}}
+\toprule
+\textbf{Tag Type} & \textbf{Example Output} & \textbf{Commands} \\
+\midrule
+Valid EM410x & \large{[+] Valid EM410x ID 57003E2DB3} & \textbf{lf em 4x05 clone --raw 57003E2DB3} \\
+Indala (len 64) & \large{[+] Indala (len 64) Raw: a0000000e3f00d51} & \textbf{lf indala read -f backup_raw.bin} \newline \textbf{lf indala clone -r a0000000e3f00d51} \newline \textbf{lf t55xx detect}; \textbf{lf t55xx read --blk 1 --r1} \\
+Fmt26 / Wiegand 26 & \large{Fmt 26 FC: 134 Card: 47173} & \textbf{lf indala clone --fc 134 --cn 47173} \\
+T5577 blank & \large{Chip type: T55x7} \newline \large{hex Blank: 00000000} & \textbf{lf t55xx config --PSK3 --rate 16 --r1} \newline \textbf{lf t55xx write --blk 0 --data 00088040} \newline \textbf{lf t55xx write --blk 1 --data A0000000} \\
+EM4305 & \large{EM4x05/EM4x69} & \textbf{lf em 4x05 info} \newline \textbf{lf em 4x05 clone --raw <raw>} \\
+Blank generic & \large{'Odd size, false positive'} \newline \large{00000000} & \textbf{lf t55xx detect} \newline \textbf{lf t55xx read --blk 1 --r1 --pg1} \newline \textbf{lf t55xx config --offset <N>} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{HF (13.56 MHz) — Common Outputs \& Commands}
+\begin{center}
+\begin{tabular}{p{4cm} p{6cm} p{5cm}}
+\toprule
+\textbf{Tag Type} & \textbf{Example Output} & \textbf{Commands} \\
+\midrule
+MIFARE UID & \large{UID: 04 A2 1B 3C 52 71 80 Type: MIFARE Classic 1K} & \textbf{hf 14a info} \\
+DESFire / iCLASS & \large{Type: MIFARE DESFire or iCLASS} & STOP — request OEM provisioning \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Advanced Troubleshooting Techniques}
+
+\subsection*{Page Mapping (WRONG vs CORRECT)}
+\textbf{Problem: Wrote to wrong page}
+- \textbf{pm3> lf t55xx write --blk 1 --data A0000000}
+- \textbf{pm3> lf t55xx write --blk 2 --data E3F00D51}
+- \textbf{pm3> lf t55xx read --blk 1 --r1} \large{Page 0 | 01 | 00000000} (WRONG)
+- \textbf{Interpretation:} Data on page1
+- \textbf{Fix:} \textbf{pm3> lf t55xx read --blk 1 --r1 --pg1} \large{Page 1 | 01 | A0000000} (CORRECT)
+- \textbf{Action:} \textbf{pm3> lf t55xx write --blk 1 --data A0000000 --pg1} \newline \textbf{pm3> lf t55xx write --blk 2 --data E3F00D51 --pg1}
+
+\subsection*{Offset Misalignment (WRONG vs CORRECT)}
+\textbf{Problem: Start bit misaligned}
+- \textbf{pm3> lf t55xx detect} \large{Offset............ 53}
+- \textbf{pm3> lf t55xx read --blk 1 --r1} \large{Page 0 | 01 | 000010FF} (WRONG)
+- \textbf{Interpretation:} Need to set offset
+- \textbf{Fix:} \textbf{pm3> lf t55xx config --offset 53}
+- \textbf{pm3> lf t55xx read --blk 1 --r1} \large{Page 0 | 01 | A0000000} (CORRECT)
+- \textbf{Tip:} Use detected offset from \textbf{lf t55xx detect}
+
+\subsection*{Using --raw for EM / Indala Clones}
+1. \textbf{pm3> lf search} \large{[+] Indala (len 64) Raw: a0000000e3f00d51}
+2. Copy raw = a0000000e3f00d51
+3. \textbf{pm3> lf em 4x05 clone --raw a0000000e3f00d51} \large{Blk | Data \newline 00 | 00081040 \newline 01 | A0000000 \newline 02 | E3F00D51}
+4. Verify: \textbf{pm3> lf t55xx read --blk 1 --r1}
+
+\subsection*{T5577 Conversion}
+- \textbf{lf indala clone -r a0000000e3f00d51} \large{Blk | Data \newline 00 | 00081040 \newline 01 | A0000000 \newline 02 | E3F00D51}
+- \textbf{lf em 4x05 clone --raw 57003E2DB3}
+- Verify: \textbf{lf t55xx read --blk 1 --r1}
+
+\subsection*{Saving Raw Dumps}
+- \textbf{pm3> lf indala read -f client_raw.bin} \large{[+] Indala read saved to client_raw.bin}
+- Absolute path: \textbf{pm3> lf indala read -f /home/pm3/dumps/condo_raw.bin}
+- Verify: \textbf{ls -l /home/pm3/dumps/condo_raw.bin} \newline \textbf{hexdump -C condo_raw.bin}
+
+\section*{Troubleshooting Hints}
+- If write accepts but readback is garbage: try \textbf{--pg1} or set offset.
+- If \textbf{lf t55xx detect} can't auto-detect modulation: \textbf{lf t55xx config --PSK3 --rate 16}
+- Test at real reader: reader acceptance is final.
+- Log: raw, blank type, offset, page, reader model.
+
+\section*{Field Tips}
+- Keep: T5577, EM4305, MIFARE/NTAG blanks.
+- Use absolute paths for backups.
+- Verify at reader.
+- Only clone with permission.
+
+\end{document}

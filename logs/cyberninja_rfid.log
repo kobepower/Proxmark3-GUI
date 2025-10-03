@@ -2909,3 +2909,1253 @@ lf tune: option "-n" requires an argument
 2025-10-03 11:44:59,930 - INFO -    Found: COM1 - Communications Port (COM1)
 2025-10-03 11:44:59,930 - INFO -    Found: COM3 - USB Serial Device (COM3)
 2025-10-03 11:44:59,930 - INFO - ✅ Found 2 serial port(s)
+2025-10-03 12:04:46,428 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 12:04:46,730 - INFO - 🔍 Scanning 2 serial ports...
+2025-10-03 12:04:46,730 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 12:04:46,730 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 12:04:46,730 - INFO - ✅ Found 2 serial port(s)
+2025-10-03 12:05:30,975 - INFO - 🔌 Connecting to PM3 on COM3...
+2025-10-03 12:05:30,975 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 12:05:30,976 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 12:05:30,976 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 12:05:30,976 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 12:05:30,976 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 12:05:30,988 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 12:05:30,988 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 12:05:30,989 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpen7imbte.sh
+2025-10-03 12:05:30,989 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpen7imbte.sh
+2025-10-03 12:05:30,989 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpqgc5ez5c.bat
+2025-10-03 12:05:31,274 - INFO - 📥 Return code: 1
+2025-10-03 12:05:31,275 - INFO - 📥 Stdout length: 329 chars
+2025-10-03 12:05:31,275 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 12:05:31,275 - INFO - 📥 Total output length: 329 chars
+2025-10-03 12:05:31,276 - ERROR - ❌ Return code 1 - Command failed!
+2025-10-03 12:05:31,276 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160531.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: hw version
+
+[+] Using UART port COM3
+
+[!] ERROR: invalid serial port COM3
+
+[?] Hint: Try the shell script ``./pm3 --list` to get a list of possible serial ports
+
+2025-10-03 12:05:31,277 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160531.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM3  [!] ERROR: invalid serial port COM3  [?] Hint: Try the shell script ``./pm3 --list` to get a list of possible serial ports ...
+2025-10-03 12:05:31,277 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 12:05:31,277 - INFO - ✅ Connected to Proxmark3
+2025-10-03 12:05:31,779 - INFO - 📤 Executing: hw version
+2025-10-03 12:05:31,779 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 12:05:31,779 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 12:05:31,780 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp5cl6n7jn.sh
+2025-10-03 12:05:31,780 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp5cl6n7jn.sh
+2025-10-03 12:05:31,781 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpdmehbnk9.bat
+2025-10-03 12:05:32,045 - INFO - 📥 Return code: 1
+2025-10-03 12:05:32,045 - INFO - 📥 Stdout length: 329 chars
+2025-10-03 12:05:32,046 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 12:05:32,046 - INFO - 📥 Total output length: 329 chars
+2025-10-03 12:05:32,046 - ERROR - ❌ Return code 1 - Command failed!
+2025-10-03 12:05:32,047 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160531.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: hw version
+
+[+] Using UART port COM3
+
+[!] ERROR: invalid serial port COM3
+
+[?] Hint: Try the shell script ``./pm3 --list` to get a list of possible serial ports
+
+2025-10-03 12:05:32,047 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160531.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM3  [!] ERROR: invalid serial port COM3  [?] Hint: Try the shell script ``./pm3 --list` to get a list of possible serial ports ...
+2025-10-03 12:05:32,049 - INFO - 📥 Output received (329 chars)
+2025-10-03 12:05:39,073 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 12:05:39,073 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 12:05:39,074 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 12:05:39,074 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 12:05:39,074 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 12:05:43,248 - INFO - 🔌 Disconnected from PM3
+2025-10-03 12:05:43,714 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 12:05:43,714 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 12:05:43,715 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 12:05:43,715 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 12:05:43,715 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 12:05:43,716 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 12:05:43,716 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 12:05:43,716 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 12:05:43,716 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp63wkqvu_.sh
+2025-10-03 12:05:43,716 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp63wkqvu_.sh
+2025-10-03 12:05:43,717 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpnk4k_bfe.bat
+2025-10-03 12:05:44,792 - INFO - 📥 Return code: 0
+2025-10-03 12:05:44,792 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 12:05:44,792 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 12:05:44,792 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 12:05:44,793 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160543.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 12:05:44,793 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 12:05:44,793 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 12:05:45,295 - INFO - 📤 Executing: hw version
+2025-10-03 12:05:45,296 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 12:05:45,296 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 12:05:45,298 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp_d2mu9c_.sh
+2025-10-03 12:05:45,299 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp_d2mu9c_.sh
+2025-10-03 12:05:45,300 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpxd0jjum5.bat
+2025-10-03 12:05:46,392 - INFO - 📥 Return code: 0
+2025-10-03 12:05:46,392 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 12:05:46,392 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 12:05:46,392 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 12:05:46,392 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003160545.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 12:05:46,395 - INFO - 📥 Output received (1475 chars)
+2025-10-03 13:48:19,927 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 13:48:20,185 - INFO - 🔍 Scanning 2 serial ports...
+2025-10-03 13:48:20,185 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 13:48:20,185 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 13:48:20,185 - INFO - ✅ Found 2 serial port(s)
+2025-10-03 13:48:34,905 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 13:48:34,905 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 13:48:34,905 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 13:48:34,907 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 13:48:34,907 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 13:48:37,007 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 13:48:37,007 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 13:48:37,008 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 13:48:37,008 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 13:48:37,008 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 13:48:37,008 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 13:48:37,019 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 13:48:37,019 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:48:37,020 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp6xzoi5_n.sh
+2025-10-03 13:48:37,020 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp6xzoi5_n.sh
+2025-10-03 13:48:37,020 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpf9dp23do.bat
+2025-10-03 13:48:38,121 - INFO - 📥 Return code: 0
+2025-10-03 13:48:38,121 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 13:48:38,121 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:48:38,122 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 13:48:38,122 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174837.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 13:48:38,122 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 13:48:38,122 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 13:48:38,623 - INFO - 📤 Executing: hw version
+2025-10-03 13:48:38,623 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 13:48:38,623 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:48:38,623 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpsyvscqjd.sh
+2025-10-03 13:48:38,624 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpsyvscqjd.sh
+2025-10-03 13:48:38,624 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp5tkfy5gl.bat
+2025-10-03 13:48:39,698 - INFO - 📥 Return code: 0
+2025-10-03 13:48:39,698 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 13:48:39,698 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:48:39,698 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 13:48:39,698 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174838.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 13:48:39,701 - INFO - 📥 Output received (1475 chars)
+2025-10-03 13:48:47,163 - INFO - 📤 Executing: lf tune -n 1
+2025-10-03 13:48:47,163 - INFO - 📤 Executing PM3 command: lf tune -n 1
+2025-10-03 13:48:47,163 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:48:47,164 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp1u5ub0oc.sh
+2025-10-03 13:48:47,164 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp1u5ub0oc.sh
+2025-10-03 13:48:47,164 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmplt5iznvk.bat
+2025-10-03 13:48:49,776 - INFO - 📥 Return code: 0
+2025-10-03 13:48:49,776 - INFO - 📥 Stdout length: 457 chars
+2025-10-03 13:48:49,776 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:48:49,776 - INFO - 📥 Total output length: 457 chars
+2025-10-03 13:48:49,776 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174847.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf tune -n 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf tune -n 1 [=] Measuring LF antenna at 125.00 kHz [=] Press pm3 button or <Enter> to exit [[33m=[0m] 0 mV /  0 V / 71 Vmax    [[33m=[0m] 23228 mV / 23 V / 23 Vmax    [2K  [=] Done! ...
+2025-10-03 13:48:49,779 - INFO - 📥 Output received (457 chars)
+2025-10-03 13:48:58,253 - INFO - 📤 Executing: lf search
+2025-10-03 13:48:58,253 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 13:48:58,254 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:48:58,255 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp1xkkofgr.sh
+2025-10-03 13:48:58,255 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp1xkkofgr.sh
+2025-10-03 13:48:58,256 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp2d3e0bhu.bat
+2025-10-03 13:49:00,449 - INFO - 📥 Return code: 0
+2025-10-03 13:49:00,449 - INFO - 📥 Stdout length: 677 chars
+2025-10-03 13:49:00,449 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:49:00,450 - INFO - 📥 Total output length: 677 chars
+2025-10-03 13:49:00,450 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174858.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [+] Indala (len 64)  Raw: a0000000e3f00d51 [+] Fmt 26 FC: 134 Card: 47173 Parity: 11 [=]  [+] Possible de-scramble patterns [+]   Printed..........
+2025-10-03 13:49:00,451 - INFO - 📥 Output received (677 chars)
+2025-10-03 13:49:05,179 - INFO - 📤 Executing: lf t55xx detect
+2025-10-03 13:49:05,179 - INFO - 📤 Executing PM3 command: lf t55xx detect
+2025-10-03 13:49:05,179 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:49:05,180 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp281oaod1.sh
+2025-10-03 13:49:05,180 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp281oaod1.sh
+2025-10-03 13:49:05,182 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp7by6x15r.bat
+2025-10-03 13:49:09,362 - INFO - 📥 Return code: 0
+2025-10-03 13:49:09,362 - INFO - 📥 Stdout length: 381 chars
+2025-10-03 13:49:09,362 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:49:09,362 - INFO - 📥 Total output length: 381 chars
+2025-10-03 13:49:09,362 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174905.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx detect  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx detect [!] Could not detect modulation automatically. Try setting it manually with 'lf t55xx config' ...
+2025-10-03 13:49:09,364 - INFO - 📥 Output received (381 chars)
+2025-10-03 13:49:55,254 - INFO - 📤 Executing: lf t55xx config
+2025-10-03 13:49:55,254 - INFO - 📤 Executing PM3 command: lf t55xx config
+2025-10-03 13:49:55,254 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 13:49:55,255 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpgnloz3gg.sh
+2025-10-03 13:49:55,255 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpgnloz3gg.sh
+2025-10-03 13:49:55,256 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpibd00yae.bat
+2025-10-03 13:49:56,315 - INFO - 📥 Return code: 0
+2025-10-03 13:49:56,315 - INFO - 📥 Stdout length: 630 chars
+2025-10-03 13:49:56,315 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 13:49:56,315 - INFO - 📥 Total output length: 630 chars
+2025-10-03 13:49:56,316 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003174955.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx config  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx config [=] --- current t55xx config -------------------------- [=]  Chip type......... T55x7 [=]  Modulation........ ASK [=]  Bit rate.......... 0 - RF/8 [=]  Inverted.......... No [=]  Offset............ 0 [=]  Seq. ter...
+2025-10-03 13:49:56,318 - INFO - 📥 Output received (630 chars)
+2025-10-03 14:05:05,551 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 14:05:05,804 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 14:05:05,807 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 14:05:05,808 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 14:05:05,808 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 14:05:05,809 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 14:05:11,572 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 14:05:11,572 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 14:05:11,573 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:05:11,573 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 14:05:11,573 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:05:11,574 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 14:05:11,583 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:05:11,583 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:05:11,584 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp8r6bubx8.sh
+2025-10-03 14:05:11,584 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp8r6bubx8.sh
+2025-10-03 14:05:11,584 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp2blv5mi1.bat
+2025-10-03 14:05:12,693 - INFO - 📥 Return code: 0
+2025-10-03 14:05:12,693 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:05:12,693 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:05:12,693 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:05:12,694 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180511.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:05:12,694 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 14:05:12,695 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 14:05:13,196 - INFO - 📤 Executing: hw version
+2025-10-03 14:05:13,196 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:05:13,196 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:05:13,199 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpv1zs3axe.sh
+2025-10-03 14:05:13,199 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpv1zs3axe.sh
+2025-10-03 14:05:13,201 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp16i92724.bat
+2025-10-03 14:05:14,271 - INFO - 📥 Return code: 0
+2025-10-03 14:05:14,271 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:05:14,271 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:05:14,272 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:05:14,272 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180513.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:05:14,277 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:05:18,729 - INFO - 📤 Executing: lf search
+2025-10-03 14:05:18,729 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:05:18,729 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:05:18,730 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmplcu4tsee.sh
+2025-10-03 14:05:18,730 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmplcu4tsee.sh
+2025-10-03 14:05:18,730 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpq52npgj5.bat
+2025-10-03 14:05:20,920 - INFO - 📥 Return code: 0
+2025-10-03 14:05:20,921 - INFO - 📥 Stdout length: 677 chars
+2025-10-03 14:05:20,921 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:05:20,921 - INFO - 📥 Total output length: 677 chars
+2025-10-03 14:05:20,921 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180518.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [+] Indala (len 64)  Raw: a0000000e3f00d51 [+] Fmt 26 FC: 134 Card: 47173 Parity: 11 [=]  [+] Possible de-scramble patterns [+]   Printed..........
+2025-10-03 14:05:20,922 - INFO - 📥 Output received (677 chars)
+2025-10-03 14:05:45,070 - INFO - 📤 Executing: lf search
+2025-10-03 14:05:45,070 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:05:45,070 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:05:45,070 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp7v8qgrjw.sh
+2025-10-03 14:05:45,071 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp7v8qgrjw.sh
+2025-10-03 14:05:45,071 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpofiz9kc7.bat
+2025-10-03 14:05:47,460 - INFO - 📥 Return code: 127
+2025-10-03 14:05:47,460 - INFO - 📥 Stdout length: 448 chars
+2025-10-03 14:05:47,461 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:05:47,461 - INFO - 📥 Total output length: 448 chars
+2025-10-03 14:05:47,461 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:05:47,462 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180545.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf search
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf search
+
+[=] Note: False Positives ARE possible
+[=] 
+[=] Checking for known tags...
+[=] 
+[-] No known 125/134 kHz tags found!
+[+] Chipset... T55xx
+[?] Hint: Try `lf t55xx` commands
+
+2025-10-03 14:05:47,462 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180545.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [+] Chipset... T55xx [?] Hint: Try `lf t55xx` commands ...
+2025-10-03 14:05:47,463 - INFO - 📥 Output received (448 chars)
+2025-10-03 14:06:00,279 - INFO - 📤 Executing: lf search
+2025-10-03 14:06:00,279 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:06:00,279 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:06:00,279 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpj31p_pvq.sh
+2025-10-03 14:06:00,279 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpj31p_pvq.sh
+2025-10-03 14:06:00,280 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp8wuvhfx_.bat
+2025-10-03 14:06:02,709 - INFO - 📥 Return code: 127
+2025-10-03 14:06:02,710 - INFO - 📥 Stdout length: 448 chars
+2025-10-03 14:06:02,710 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:06:02,710 - INFO - 📥 Total output length: 448 chars
+2025-10-03 14:06:02,710 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:06:02,710 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180600.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf search
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf search
+
+[=] Note: False Positives ARE possible
+[=] 
+[=] Checking for known tags...
+[=] 
+[-] No known 125/134 kHz tags found!
+[+] Chipset... T55xx
+[?] Hint: Try `lf t55xx` commands
+
+2025-10-03 14:06:02,710 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180600.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [+] Chipset... T55xx [?] Hint: Try `lf t55xx` commands ...
+2025-10-03 14:06:02,712 - INFO - 📥 Output received (448 chars)
+2025-10-03 14:06:20,955 - INFO - 📤 Executing: lf t55xx
+2025-10-03 14:06:20,955 - INFO - 📤 Executing PM3 command: lf t55xx
+2025-10-03 14:06:20,955 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:06:20,956 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpuz6plsl6.sh
+2025-10-03 14:06:20,956 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpuz6plsl6.sh
+2025-10-03 14:06:20,957 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp0nyt49iu.bat
+2025-10-03 14:06:22,025 - INFO - 📥 Return code: 0
+2025-10-03 14:06:22,025 - INFO - 📥 Stdout length: 2019 chars
+2025-10-03 14:06:22,025 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:06:22,025 - INFO - 📥 Total output length: 2019 chars
+2025-10-03 14:06:22,025 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180621.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx  -----------      ---------------------------- notice -----------------------------                  Remember to run `lf t55xx detect` first whenever a new card                  is placed on the Proxmark3 or the config block ch...
+2025-10-03 14:06:22,027 - INFO - 📥 Output received (2019 chars)
+2025-10-03 14:07:06,202 - INFO - 📤 Executing: lf t55xx read --blk 0
+2025-10-03 14:07:06,203 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 0
+2025-10-03 14:07:06,204 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:06,206 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpx9h24c5w.sh
+2025-10-03 14:07:06,206 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpx9h24c5w.sh
+2025-10-03 14:07:06,209 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmptfvv91oo.bat
+2025-10-03 14:07:07,579 - INFO - 📥 Return code: 127
+2025-10-03 14:07:07,579 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:07,580 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:07,580 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:07,580 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:07,581 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180706.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 0
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 0
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:07,582 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180706.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 0  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 0  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:07,582 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:07,583 - INFO - 📤 Executing: lf t55xx read --blk 1
+2025-10-03 14:07:07,583 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 1
+2025-10-03 14:07:07,583 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:07,584 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpnys8nomr.sh
+2025-10-03 14:07:07,584 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpnys8nomr.sh
+2025-10-03 14:07:07,584 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp7talmv9u.bat
+2025-10-03 14:07:08,951 - INFO - 📥 Return code: 127
+2025-10-03 14:07:08,951 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:08,951 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:08,951 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:08,951 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:08,951 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180707.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 1
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 1
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:08,951 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180707.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 1  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:08,952 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:08,952 - INFO - 📤 Executing: lf t55xx read --blk 2
+2025-10-03 14:07:08,953 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 2
+2025-10-03 14:07:08,953 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:08,953 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpgcdmxyu9.sh
+2025-10-03 14:07:08,953 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpgcdmxyu9.sh
+2025-10-03 14:07:08,953 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpcghidgvv.bat
+2025-10-03 14:07:10,301 - INFO - 📥 Return code: 127
+2025-10-03 14:07:10,301 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:10,301 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:10,301 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:10,301 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:10,302 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180709.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 2
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 2
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:10,302 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180709.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 2  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 2  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:10,303 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:10,303 - INFO - 📤 Executing: lf t55xx read --blk 3
+2025-10-03 14:07:10,303 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 3
+2025-10-03 14:07:10,303 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:10,304 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpjswxkn1_.sh
+2025-10-03 14:07:10,304 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpjswxkn1_.sh
+2025-10-03 14:07:10,304 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpld2_wh_6.bat
+2025-10-03 14:07:11,630 - INFO - 📥 Return code: 127
+2025-10-03 14:07:11,630 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:11,630 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:11,631 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:11,631 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:11,638 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180710.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 3
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 3
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:11,639 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180710.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 3  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 3  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:11,643 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:11,645 - INFO - 📤 Executing: lf t55xx read --blk 4
+2025-10-03 14:07:11,648 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 4
+2025-10-03 14:07:11,649 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:11,649 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp47sbbsub.sh
+2025-10-03 14:07:11,649 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp47sbbsub.sh
+2025-10-03 14:07:11,650 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpcjamhslc.bat
+2025-10-03 14:07:13,012 - INFO - 📥 Return code: 127
+2025-10-03 14:07:13,012 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:13,012 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:13,012 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:13,012 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:13,012 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180711.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 4
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 4
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:13,013 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180711.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 4  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 4  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:13,014 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:13,014 - INFO - 📤 Executing: lf t55xx read --blk 5
+2025-10-03 14:07:13,015 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 5
+2025-10-03 14:07:13,015 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:13,015 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpzeo5mn8_.sh
+2025-10-03 14:07:13,015 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpzeo5mn8_.sh
+2025-10-03 14:07:13,015 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp71q4e6vc.bat
+2025-10-03 14:07:14,348 - INFO - 📥 Return code: 127
+2025-10-03 14:07:14,349 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:14,349 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:14,349 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:14,349 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:14,350 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180713.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 5
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 5
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:14,350 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180713.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 5  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 5  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:14,351 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:14,351 - INFO - 📤 Executing: lf t55xx read --blk 6
+2025-10-03 14:07:14,351 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 6
+2025-10-03 14:07:14,351 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:14,352 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpd2a25cpt.sh
+2025-10-03 14:07:14,352 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpd2a25cpt.sh
+2025-10-03 14:07:14,352 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpw8s0lqtx.bat
+2025-10-03 14:07:15,701 - INFO - 📥 Return code: 127
+2025-10-03 14:07:15,702 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:15,702 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:15,702 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:15,702 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:15,703 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180714.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 6
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 6
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:15,703 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180714.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 6  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 6  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:15,704 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:07:15,704 - INFO - 📤 Executing: lf t55xx read --blk 7
+2025-10-03 14:07:15,704 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 7
+2025-10-03 14:07:15,704 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:07:15,705 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp54mi6fz3.sh
+2025-10-03 14:07:15,705 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp54mi6fz3.sh
+2025-10-03 14:07:15,705 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp62i3y699.bat
+2025-10-03 14:07:17,052 - INFO - 📥 Return code: 127
+2025-10-03 14:07:17,052 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:07:17,052 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:07:17,052 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:07:17,052 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:07:17,052 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180715.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf t55xx read --blk 7
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf t55xx read --blk 7
+
+[+] Page 0
+[+] blk | hex data | binary                           | ascii
+[+] ----+----------+----------------------------------+-------
+
+2025-10-03 14:07:17,053 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180715.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 7  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 7  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:07:17,054 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:08:11,736 - INFO - 📤 Executing: hw version
+2025-10-03 14:08:11,736 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:08:11,736 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:08:11,737 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp08ouxhmt.sh
+2025-10-03 14:08:11,737 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp08ouxhmt.sh
+2025-10-03 14:08:11,738 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmps_gn5znt.bat
+2025-10-03 14:08:12,821 - INFO - 📥 Return code: 0
+2025-10-03 14:08:12,822 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:08:12,822 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:08:12,822 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:08:12,822 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180811.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:08:12,824 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:09:49,435 - INFO - 📤 Executing: hw version
+2025-10-03 14:09:49,435 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:09:49,435 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:09:49,436 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpedmcpxyy.sh
+2025-10-03 14:09:49,436 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpedmcpxyy.sh
+2025-10-03 14:09:49,436 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpai977iqo.bat
+2025-10-03 14:09:50,513 - INFO - 📥 Return code: 0
+2025-10-03 14:09:50,513 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:09:50,513 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:09:50,513 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:09:50,514 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003180949.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:09:50,515 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:41:34,929 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 14:41:38,468 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 14:41:38,468 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 14:41:38,468 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 14:41:38,468 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 14:41:38,468 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 14:41:45,978 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 14:41:45,978 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 14:41:45,978 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:41:45,979 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 14:41:45,979 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:41:45,979 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 14:41:45,988 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:41:45,988 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:41:45,988 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp7yu4r4fo.sh
+2025-10-03 14:41:45,988 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp7yu4r4fo.sh
+2025-10-03 14:41:45,990 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpzy0y9865.bat
+2025-10-03 14:41:47,049 - INFO - 📥 Return code: 0
+2025-10-03 14:41:47,049 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:41:47,049 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:41:47,049 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:41:47,049 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184146.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:41:47,049 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 14:41:47,049 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 14:41:47,551 - INFO - 📤 Executing: hw version
+2025-10-03 14:41:47,552 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:41:47,552 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:41:47,555 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpr_x0f4xw.sh
+2025-10-03 14:41:47,555 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpr_x0f4xw.sh
+2025-10-03 14:41:47,557 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpxnbebxzw.bat
+2025-10-03 14:41:48,666 - INFO - 📥 Return code: 0
+2025-10-03 14:41:48,666 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:41:48,667 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:41:48,667 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:41:48,667 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184147.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:41:48,669 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:42:16,117 - INFO - 📤 Executing: lf tune -n 1
+2025-10-03 14:42:16,117 - INFO - 📤 Executing PM3 command: lf tune -n 1
+2025-10-03 14:42:16,117 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:42:16,118 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp2zxz4cv1.sh
+2025-10-03 14:42:16,118 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp2zxz4cv1.sh
+2025-10-03 14:42:16,118 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpliojzwcm.bat
+2025-10-03 14:42:17,261 - INFO - 📥 Return code: 0
+2025-10-03 14:42:17,261 - INFO - 📥 Stdout length: 457 chars
+2025-10-03 14:42:17,262 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:42:17,262 - INFO - 📥 Total output length: 457 chars
+2025-10-03 14:42:17,262 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184216.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf tune -n 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf tune -n 1 [=] Measuring LF antenna at 125.00 kHz [=] Press pm3 button or <Enter> to exit [[33m=[0m] 0 mV /  0 V / 71 Vmax    [[33m=[0m] 23701 mV / 23 V / 23 Vmax    [2K  [=] Done! ...
+2025-10-03 14:42:17,265 - INFO - 📥 Output received (457 chars)
+2025-10-03 14:42:43,441 - INFO - 📤 Executing: lf search
+2025-10-03 14:42:43,441 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:42:43,441 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:42:43,443 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpyi_32lk3.sh
+2025-10-03 14:42:43,443 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpyi_32lk3.sh
+2025-10-03 14:42:43,444 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpdllj66yd.bat
+2025-10-03 14:42:46,160 - INFO - 📥 Return code: 127
+2025-10-03 14:42:46,160 - INFO - 📥 Stdout length: 425 chars
+2025-10-03 14:42:46,160 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:42:46,161 - INFO - 📥 Total output length: 425 chars
+2025-10-03 14:42:46,161 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:42:46,161 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184243.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf search
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf search
+
+[=] Note: False Positives ARE possible
+[=] 
+[=] Checking for known tags...
+[=] 
+[-] No known 125/134 kHz tags found!
+[=] Couldn't identify a chipset
+
+2025-10-03 14:42:46,161 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184243.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [=] Couldn't identify a chipset ...
+2025-10-03 14:42:46,163 - INFO - 📥 Output received (425 chars)
+2025-10-03 14:43:02,381 - INFO - 📤 Executing: lf search
+2025-10-03 14:43:02,381 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:43:02,382 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:43:02,382 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpdyzlpsea.sh
+2025-10-03 14:43:02,383 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpdyzlpsea.sh
+2025-10-03 14:43:02,384 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpenef4n6f.bat
+2025-10-03 14:43:05,107 - INFO - 📥 Return code: 127
+2025-10-03 14:43:05,108 - INFO - 📥 Stdout length: 425 chars
+2025-10-03 14:43:05,108 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:43:05,109 - INFO - 📥 Total output length: 425 chars
+2025-10-03 14:43:05,109 - ERROR - ❌ Return code 127 - Command failed!
+2025-10-03 14:43:05,109 - ERROR - ❌ FULL Stdout: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184302.txt
+[+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json`
+[+] execute command from commandline: lf search
+
+[+] Using UART port COM5
+[+] Communicating with PM3 over USB-CDC
+[usb|script] pm3 --> lf search
+
+[=] Note: False Positives ARE possible
+[=] 
+[=] Checking for known tags...
+[=] 
+[-] No known 125/134 kHz tags found!
+[=] Couldn't identify a chipset
+
+2025-10-03 14:43:05,109 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184302.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [=] Couldn't identify a chipset ...
+2025-10-03 14:43:05,110 - INFO - 📥 Output received (425 chars)
+2025-10-03 14:43:07,958 - INFO - 📤 Executing: lf sniff
+2025-10-03 14:43:07,958 - INFO - 📤 Executing PM3 command: lf sniff
+2025-10-03 14:43:07,958 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:43:07,959 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp0vi214jy.sh
+2025-10-03 14:43:07,959 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp0vi214jy.sh
+2025-10-03 14:43:07,960 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp4rt2fk85.bat
+2025-10-03 14:43:09,623 - INFO - 📥 Return code: 0
+2025-10-03 14:43:09,624 - INFO - 📥 Stdout length: 273 chars
+2025-10-03 14:43:09,624 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:43:09,624 - INFO - 📥 Total output length: 273 chars
+2025-10-03 14:43:09,624 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184308.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf sniff  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf sniff ...
+2025-10-03 14:43:09,625 - INFO - 📥 Output received (273 chars)
+2025-10-03 14:45:12,049 - INFO - 📤 Executing: lf t55xx wipe
+2025-10-03 14:45:12,049 - INFO - 📤 Executing PM3 command: lf t55xx wipe
+2025-10-03 14:45:12,049 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:45:12,049 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpio9zq5is.sh
+2025-10-03 14:45:12,049 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpio9zq5is.sh
+2025-10-03 14:45:12,050 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpb16nx5v9.bat
+2025-10-03 14:45:14,026 - INFO - 📥 Return code: 0
+2025-10-03 14:45:14,026 - INFO - 📥 Stdout length: 758 chars
+2025-10-03 14:45:14,027 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:45:14,027 - INFO - 📥 Total output length: 758 chars
+2025-10-03 14:45:14,028 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184512.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx wipe  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx wipe [=] Target T55x7 tag [=] Default configuration block 000880E0  [=] Begin wiping... [=] Writing page 0  block: 00  data: 0x000880E0  [=] Writing page 0  block: 01  data: 0x00000000  [=] Writing page 0  block: 02  data:...
+2025-10-03 14:45:14,030 - INFO - 📥 Output received (758 chars)
+2025-10-03 14:45:43,613 - INFO - 📤 Executing: lf indala reader
+2025-10-03 14:45:43,613 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 14:45:43,613 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:45:43,614 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp4ybew4py.sh
+2025-10-03 14:45:43,614 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp4ybew4py.sh
+2025-10-03 14:45:43,615 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpmlmn4y0s.bat
+2025-10-03 14:45:45,208 - INFO - 📥 Return code: 0
+2025-10-03 14:45:45,208 - INFO - 📥 Stdout length: 289 chars
+2025-10-03 14:45:45,208 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:45:45,209 - INFO - 📥 Total output length: 289 chars
+2025-10-03 14:45:45,209 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184543.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader ...
+2025-10-03 14:45:45,210 - INFO - 📥 Output received (289 chars)
+2025-10-03 14:46:20,465 - INFO - 📤 Executing: lf em 410x reader
+2025-10-03 14:46:20,465 - INFO - 📤 Executing PM3 command: lf em 410x reader
+2025-10-03 14:46:20,465 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:46:20,466 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpoh7t1547.sh
+2025-10-03 14:46:20,466 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpoh7t1547.sh
+2025-10-03 14:46:20,466 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp7dn6q62r.bat
+2025-10-03 14:46:21,865 - INFO - 📥 Return code: 0
+2025-10-03 14:46:21,865 - INFO - 📥 Stdout length: 291 chars
+2025-10-03 14:46:21,865 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:46:21,865 - INFO - 📥 Total output length: 291 chars
+2025-10-03 14:46:21,865 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184620.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf em 410x reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf em 410x reader ...
+2025-10-03 14:46:21,866 - INFO - 📥 Output received (291 chars)
+2025-10-03 14:46:25,372 - INFO - 📤 Executing: lf hid reader
+2025-10-03 14:46:25,372 - INFO - 📤 Executing PM3 command: lf hid reader
+2025-10-03 14:46:25,372 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:46:25,373 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp4zh5cvzd.sh
+2025-10-03 14:46:25,373 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp4zh5cvzd.sh
+2025-10-03 14:46:25,374 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpojlpggwg.bat
+2025-10-03 14:46:26,817 - INFO - 📥 Return code: 0
+2025-10-03 14:46:26,817 - INFO - 📥 Stdout length: 283 chars
+2025-10-03 14:46:26,817 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:46:26,817 - INFO - 📥 Total output length: 283 chars
+2025-10-03 14:46:26,817 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184625.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf hid reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf hid reader ...
+2025-10-03 14:46:26,819 - INFO - 📥 Output received (283 chars)
+2025-10-03 14:46:38,627 - INFO - 📤 Executing: lf t55xx write --blk 1 --data 000880E0
+2025-10-03 14:46:38,627 - INFO - 📤 Executing PM3 command: lf t55xx write --blk 1 --data 000880E0
+2025-10-03 14:46:38,627 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:46:38,627 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpemg_27a0.sh
+2025-10-03 14:46:38,627 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpemg_27a0.sh
+2025-10-03 14:46:38,627 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpxq4dm8eu.bat
+2025-10-03 14:46:39,811 - INFO - 📥 Return code: 0
+2025-10-03 14:46:39,811 - INFO - 📥 Stdout length: 382 chars
+2025-10-03 14:46:39,811 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:46:39,811 - INFO - 📥 Total output length: 382 chars
+2025-10-03 14:46:39,811 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184638.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx write --blk 1 --data 000880E0  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx write --blk 1 --data 000880E0 [=] Writing page 0  block: 01  data: 0x000880E0  ...
+2025-10-03 14:46:39,812 - INFO - 📥 Output received (382 chars)
+2025-10-03 14:46:49,254 - INFO - 📤 Executing: lf t55xx write --blk 1 --data 000880E0
+2025-10-03 14:46:49,254 - INFO - 📤 Executing PM3 command: lf t55xx write --blk 1 --data 000880E0
+2025-10-03 14:46:49,254 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:46:49,256 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpaurw6zh9.sh
+2025-10-03 14:46:49,256 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpaurw6zh9.sh
+2025-10-03 14:46:49,256 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpwf0grwfg.bat
+2025-10-03 14:46:50,413 - INFO - 📥 Return code: 0
+2025-10-03 14:46:50,413 - INFO - 📥 Stdout length: 382 chars
+2025-10-03 14:46:50,413 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:46:50,413 - INFO - 📥 Total output length: 382 chars
+2025-10-03 14:46:50,414 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003184649.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx write --blk 1 --data 000880E0  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx write --blk 1 --data 000880E0 [=] Writing page 0  block: 01  data: 0x000880E0  ...
+2025-10-03 14:46:50,415 - INFO - 📥 Output received (382 chars)
+2025-10-03 14:52:16,101 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 14:52:20,005 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 14:52:20,006 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 14:52:20,006 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 14:52:20,006 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 14:52:20,006 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 14:52:24,645 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 14:52:24,646 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 14:52:24,646 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:52:24,646 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 14:52:24,647 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:52:24,647 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 14:52:24,659 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:52:24,659 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:52:24,660 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpyaba1ai6.sh
+2025-10-03 14:52:24,660 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpyaba1ai6.sh
+2025-10-03 14:52:24,661 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpfnpymhh0.bat
+2025-10-03 14:52:25,730 - INFO - 📥 Return code: 0
+2025-10-03 14:52:25,730 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:52:25,731 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:52:25,731 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:52:25,731 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185224.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:52:25,732 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 14:52:25,732 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 14:52:26,234 - INFO - 📤 Executing: hw version
+2025-10-03 14:52:26,235 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:52:26,235 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:52:26,237 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpps1plycb.sh
+2025-10-03 14:52:26,237 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpps1plycb.sh
+2025-10-03 14:52:26,240 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpz8w_trkr.bat
+2025-10-03 14:52:27,307 - INFO - 📥 Return code: 0
+2025-10-03 14:52:27,307 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:52:27,308 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:52:27,308 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:52:27,308 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185226.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:52:27,311 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:52:34,237 - INFO - 📤 Executing: lf search
+2025-10-03 14:52:34,237 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:52:34,237 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:52:34,239 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpiye5_1zq.sh
+2025-10-03 14:52:34,240 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpiye5_1zq.sh
+2025-10-03 14:52:34,240 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpbwhiuxmv.bat
+2025-10-03 14:52:36,931 - INFO - 📥 Return code: 127
+2025-10-03 14:52:36,932 - INFO - 📥 Stdout length: 425 chars
+2025-10-03 14:52:36,932 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:52:36,932 - INFO - 📥 Total output length: 425 chars
+2025-10-03 14:52:36,932 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:52:36,932 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185234.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [=] Couldn't identify a chipset ...
+2025-10-03 14:52:36,937 - INFO - 📥 Output received (425 chars)
+2025-10-03 14:53:05,789 - INFO - 📤 Executing: lf search
+2025-10-03 14:53:05,789 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 14:53:05,789 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:53:05,790 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp5o_1q7uf.sh
+2025-10-03 14:53:05,790 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp5o_1q7uf.sh
+2025-10-03 14:53:05,790 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpkjda9o_c.bat
+2025-10-03 14:53:08,483 - INFO - 📥 Return code: 127
+2025-10-03 14:53:08,483 - INFO - 📥 Stdout length: 425 chars
+2025-10-03 14:53:08,483 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:53:08,483 - INFO - 📥 Total output length: 425 chars
+2025-10-03 14:53:08,484 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:53:08,484 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185305.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [-] No known 125/134 kHz tags found! [=] Couldn't identify a chipset ...
+2025-10-03 14:53:08,487 - INFO - 📥 Output received (425 chars)
+2025-10-03 14:53:28,657 - INFO - 📤 Executing: lf t55xx config
+2025-10-03 14:53:28,657 - INFO - 📤 Executing PM3 command: lf t55xx config
+2025-10-03 14:53:28,657 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:53:28,659 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpjt_n6rpp.sh
+2025-10-03 14:53:28,659 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpjt_n6rpp.sh
+2025-10-03 14:53:28,660 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp5vnu974f.bat
+2025-10-03 14:53:29,702 - INFO - 📥 Return code: 0
+2025-10-03 14:53:29,702 - INFO - 📥 Stdout length: 630 chars
+2025-10-03 14:53:29,702 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:53:29,702 - INFO - 📥 Total output length: 630 chars
+2025-10-03 14:53:29,703 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185328.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx config  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx config [=] --- current t55xx config -------------------------- [=]  Chip type......... T55x7 [=]  Modulation........ ASK [=]  Bit rate.......... 0 - RF/8 [=]  Inverted.......... No [=]  Offset............ 0 [=]  Seq. ter...
+2025-10-03 14:53:29,706 - INFO - 📥 Output received (630 chars)
+2025-10-03 14:54:43,049 - INFO - 📤 Executing: lf t55xx detect
+2025-10-03 14:54:43,049 - INFO - 📤 Executing PM3 command: lf t55xx detect
+2025-10-03 14:54:43,049 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:54:43,050 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp5oq2b0it.sh
+2025-10-03 14:54:43,050 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp5oq2b0it.sh
+2025-10-03 14:54:43,051 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpqex4zi43.bat
+2025-10-03 14:54:47,385 - INFO - 📥 Return code: 0
+2025-10-03 14:54:47,385 - INFO - 📥 Stdout length: 381 chars
+2025-10-03 14:54:47,386 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:54:47,386 - INFO - 📥 Total output length: 381 chars
+2025-10-03 14:54:47,386 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185443.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx detect  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx detect [!] Could not detect modulation automatically. Try setting it manually with 'lf t55xx config' ...
+2025-10-03 14:54:47,390 - INFO - 📥 Output received (381 chars)
+2025-10-03 14:55:08,465 - INFO - 📤 Executing: lf t55xx read --blk 0
+2025-10-03 14:55:08,466 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 0
+2025-10-03 14:55:08,467 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:08,468 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpyo_j_ncz.sh
+2025-10-03 14:55:08,468 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpyo_j_ncz.sh
+2025-10-03 14:55:08,470 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpf7zi83wx.bat
+2025-10-03 14:55:09,832 - INFO - 📥 Return code: 127
+2025-10-03 14:55:09,832 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:09,832 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:09,833 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:09,833 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:09,833 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185508.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 0  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 0  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:09,835 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:09,836 - INFO - 📤 Executing: lf t55xx read --blk 1
+2025-10-03 14:55:09,836 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 1
+2025-10-03 14:55:09,836 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:09,836 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpaih7jckw.sh
+2025-10-03 14:55:09,836 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpaih7jckw.sh
+2025-10-03 14:55:09,836 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpy2qpvizv.bat
+2025-10-03 14:55:11,194 - INFO - 📥 Return code: 127
+2025-10-03 14:55:11,194 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:11,194 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:11,195 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:11,195 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:11,195 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185510.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 1  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:11,196 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:11,197 - INFO - 📤 Executing: lf t55xx read --blk 2
+2025-10-03 14:55:11,197 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 2
+2025-10-03 14:55:11,197 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:11,198 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpore45_ph.sh
+2025-10-03 14:55:11,198 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpore45_ph.sh
+2025-10-03 14:55:11,198 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpko3306a1.bat
+2025-10-03 14:55:12,551 - INFO - 📥 Return code: 127
+2025-10-03 14:55:12,552 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:12,552 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:12,552 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:12,552 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:12,552 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185511.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 2  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 2  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:12,553 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:12,553 - INFO - 📤 Executing: lf t55xx read --blk 3
+2025-10-03 14:55:12,554 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 3
+2025-10-03 14:55:12,554 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:12,554 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpo0m07sb5.sh
+2025-10-03 14:55:12,554 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpo0m07sb5.sh
+2025-10-03 14:55:12,554 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpsbioz5g3.bat
+2025-10-03 14:55:13,882 - INFO - 📥 Return code: 127
+2025-10-03 14:55:13,882 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:13,884 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:13,884 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:13,884 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:13,884 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185512.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 3  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 3  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:13,886 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:13,886 - INFO - 📤 Executing: lf t55xx read --blk 4
+2025-10-03 14:55:13,886 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 4
+2025-10-03 14:55:13,886 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:13,887 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpofiyf5i1.sh
+2025-10-03 14:55:13,887 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpofiyf5i1.sh
+2025-10-03 14:55:13,887 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp1r09fg8t.bat
+2025-10-03 14:55:15,215 - INFO - 📥 Return code: 127
+2025-10-03 14:55:15,216 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:15,216 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:15,216 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:15,216 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:15,217 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185514.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 4  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 4  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:15,218 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:15,219 - INFO - 📤 Executing: lf t55xx read --blk 5
+2025-10-03 14:55:15,219 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 5
+2025-10-03 14:55:15,219 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:15,220 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmptcdl9rja.sh
+2025-10-03 14:55:15,220 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmptcdl9rja.sh
+2025-10-03 14:55:15,220 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpytppa8y4.bat
+2025-10-03 14:55:16,545 - INFO - 📥 Return code: 127
+2025-10-03 14:55:16,546 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:16,546 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:16,546 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:16,546 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:16,546 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185515.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 5  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 5  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:16,547 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:16,549 - INFO - 📤 Executing: lf t55xx read --blk 6
+2025-10-03 14:55:16,549 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 6
+2025-10-03 14:55:16,549 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:16,549 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp5xu9_tuh.sh
+2025-10-03 14:55:16,549 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp5xu9_tuh.sh
+2025-10-03 14:55:16,549 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmphqty51cs.bat
+2025-10-03 14:55:17,900 - INFO - 📥 Return code: 127
+2025-10-03 14:55:17,900 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:17,900 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:17,901 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:17,901 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:17,901 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185516.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 6  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 6  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:17,903 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:55:17,903 - INFO - 📤 Executing: lf t55xx read --blk 7
+2025-10-03 14:55:17,903 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 7
+2025-10-03 14:55:17,903 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:55:17,904 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmps13q2zn6.sh
+2025-10-03 14:55:17,904 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmps13q2zn6.sh
+2025-10-03 14:55:17,905 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp7vievmxh.bat
+2025-10-03 14:55:19,251 - INFO - 📥 Return code: 127
+2025-10-03 14:55:19,251 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:55:19,251 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:55:19,251 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:55:19,251 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:55:19,252 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185518.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 7  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 7  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:55:19,253 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:57:09,576 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 14:57:13,946 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 14:57:13,946 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 14:57:13,946 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 14:57:13,946 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 14:57:13,947 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 14:57:22,064 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 14:57:22,064 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 14:57:22,065 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:57:22,065 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 14:57:22,065 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 14:57:22,065 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 14:57:22,076 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:57:22,076 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:57:22,077 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpgwgwyg2k.sh
+2025-10-03 14:57:22,077 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpgwgwyg2k.sh
+2025-10-03 14:57:22,077 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpzhbraqmv.bat
+2025-10-03 14:57:23,137 - INFO - 📥 Return code: 0
+2025-10-03 14:57:23,139 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:57:23,139 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:57:23,139 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:57:23,139 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185722.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:57:23,139 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 14:57:23,139 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 14:57:23,641 - INFO - 📤 Executing: hw version
+2025-10-03 14:57:23,641 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 14:57:23,641 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:57:23,642 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp3c2bo87d.sh
+2025-10-03 14:57:23,643 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp3c2bo87d.sh
+2025-10-03 14:57:23,643 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpe9o2cxnq.bat
+2025-10-03 14:57:24,762 - INFO - 📥 Return code: 0
+2025-10-03 14:57:24,762 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 14:57:24,763 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:57:24,763 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 14:57:24,763 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185723.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 14:57:24,767 - INFO - 📥 Output received (1475 chars)
+2025-10-03 14:57:48,593 - INFO - 📤 Executing: lf indala reader
+2025-10-03 14:57:48,594 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 14:57:48,594 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:57:48,594 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpn0rqwnzs.sh
+2025-10-03 14:57:48,595 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpn0rqwnzs.sh
+2025-10-03 14:57:48,595 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp5_nmvthk.bat
+2025-10-03 14:57:50,172 - INFO - 📥 Return code: 0
+2025-10-03 14:57:50,172 - INFO - 📥 Stdout length: 289 chars
+2025-10-03 14:57:50,172 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:57:50,173 - INFO - 📥 Total output length: 289 chars
+2025-10-03 14:57:50,173 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185748.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader ...
+2025-10-03 14:57:50,174 - INFO - 📥 Output received (289 chars)
+2025-10-03 14:58:20,835 - INFO - 📤 Executing: lf t55xx detect
+2025-10-03 14:58:20,835 - INFO - 📤 Executing PM3 command: lf t55xx detect
+2025-10-03 14:58:20,835 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:20,836 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpnef_orhp.sh
+2025-10-03 14:58:20,836 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpnef_orhp.sh
+2025-10-03 14:58:20,836 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpruwirxuz.bat
+2025-10-03 14:58:25,063 - INFO - 📥 Return code: 0
+2025-10-03 14:58:25,063 - INFO - 📥 Stdout length: 381 chars
+2025-10-03 14:58:25,063 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:25,063 - INFO - 📥 Total output length: 381 chars
+2025-10-03 14:58:25,063 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185821.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx detect  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx detect [!] Could not detect modulation automatically. Try setting it manually with 'lf t55xx config' ...
+2025-10-03 14:58:25,066 - INFO - 📥 Output received (381 chars)
+2025-10-03 14:58:35,562 - INFO - 📤 Executing: lf t55xx read --blk 0
+2025-10-03 14:58:35,563 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 0
+2025-10-03 14:58:35,564 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:35,564 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp1ft7edw0.sh
+2025-10-03 14:58:35,564 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp1ft7edw0.sh
+2025-10-03 14:58:35,565 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpsvhtpik2.bat
+2025-10-03 14:58:36,915 - INFO - 📥 Return code: 127
+2025-10-03 14:58:36,915 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:36,915 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:36,915 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:36,916 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:36,916 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185835.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 0  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 0  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:36,918 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:36,918 - INFO - 📤 Executing: lf t55xx read --blk 1
+2025-10-03 14:58:36,918 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 1
+2025-10-03 14:58:36,918 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:36,918 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpn243s44w.sh
+2025-10-03 14:58:36,919 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpn243s44w.sh
+2025-10-03 14:58:36,919 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpkhqwtkr_.bat
+2025-10-03 14:58:38,283 - INFO - 📥 Return code: 127
+2025-10-03 14:58:38,283 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:38,283 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:38,284 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:38,284 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:38,284 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185837.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 1  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:38,286 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:38,286 - INFO - 📤 Executing: lf t55xx read --blk 2
+2025-10-03 14:58:38,286 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 2
+2025-10-03 14:58:38,286 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:38,286 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmppzh61ymu.sh
+2025-10-03 14:58:38,286 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmppzh61ymu.sh
+2025-10-03 14:58:38,287 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpe7ay8izh.bat
+2025-10-03 14:58:39,622 - INFO - 📥 Return code: 127
+2025-10-03 14:58:39,622 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:39,622 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:39,622 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:39,622 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:39,622 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185838.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 2  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 2  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:39,624 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:39,625 - INFO - 📤 Executing: lf t55xx read --blk 3
+2025-10-03 14:58:39,625 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 3
+2025-10-03 14:58:39,626 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:39,626 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpp_qemgkx.sh
+2025-10-03 14:58:39,626 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpp_qemgkx.sh
+2025-10-03 14:58:39,627 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmph0yglqwo.bat
+2025-10-03 14:58:40,992 - INFO - 📥 Return code: 127
+2025-10-03 14:58:40,992 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:40,993 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:40,993 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:40,993 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:40,994 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185839.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 3  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 3  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:40,999 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:40,999 - INFO - 📤 Executing: lf t55xx read --blk 4
+2025-10-03 14:58:41,000 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 4
+2025-10-03 14:58:41,000 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:41,001 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpwo7nul9n.sh
+2025-10-03 14:58:41,001 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpwo7nul9n.sh
+2025-10-03 14:58:41,001 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpjf3gafd_.bat
+2025-10-03 14:58:42,357 - INFO - 📥 Return code: 127
+2025-10-03 14:58:42,358 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:42,358 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:42,358 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:42,358 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:42,359 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185841.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 4  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 4  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:42,360 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:42,362 - INFO - 📤 Executing: lf t55xx read --blk 5
+2025-10-03 14:58:42,362 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 5
+2025-10-03 14:58:42,362 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:42,362 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp0ecac7k4.sh
+2025-10-03 14:58:42,362 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp0ecac7k4.sh
+2025-10-03 14:58:42,363 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpkgp7tdo2.bat
+2025-10-03 14:58:43,704 - INFO - 📥 Return code: 127
+2025-10-03 14:58:43,704 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:43,704 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:43,704 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:43,704 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:43,704 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185842.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 5  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 5  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:43,707 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:43,707 - INFO - 📤 Executing: lf t55xx read --blk 6
+2025-10-03 14:58:43,707 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 6
+2025-10-03 14:58:43,707 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:43,708 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpsl0dvcjq.sh
+2025-10-03 14:58:43,708 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpsl0dvcjq.sh
+2025-10-03 14:58:43,708 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp_obw9hoc.bat
+2025-10-03 14:58:45,085 - INFO - 📥 Return code: 127
+2025-10-03 14:58:45,085 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:45,085 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:45,085 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:45,086 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:45,086 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185843.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 6  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 6  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:45,089 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:58:45,089 - INFO - 📤 Executing: lf t55xx read --blk 7
+2025-10-03 14:58:45,089 - INFO - 📤 Executing PM3 command: lf t55xx read --blk 7
+2025-10-03 14:58:45,089 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:58:45,090 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpt22tfjbv.sh
+2025-10-03 14:58:45,090 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpt22tfjbv.sh
+2025-10-03 14:58:45,090 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpc9cokvww.bat
+2025-10-03 14:58:46,401 - INFO - 📥 Return code: 127
+2025-10-03 14:58:46,401 - INFO - 📥 Stdout length: 436 chars
+2025-10-03 14:58:46,402 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:58:46,402 - INFO - 📥 Total output length: 436 chars
+2025-10-03 14:58:46,402 - INFO - ⚠️ Return code 127 but command executed successfully (ProxSpace wrapper quirk)
+2025-10-03 14:58:46,402 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185845.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx read --blk 7  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx read --blk 7  [+] Page 0 [+] blk | hex data | binary                           | ascii [+] ----+----------+----------------------------------+------- ...
+2025-10-03 14:58:46,404 - INFO - 📥 Output received (436 chars)
+2025-10-03 14:59:21,445 - INFO - 📤 Executing: lf indala reader
+2025-10-03 14:59:21,446 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 14:59:21,446 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 14:59:21,447 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp1_r17mg4.sh
+2025-10-03 14:59:21,447 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp1_r17mg4.sh
+2025-10-03 14:59:21,447 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpgn7wjw5k.bat
+2025-10-03 14:59:23,016 - INFO - 📥 Return code: 0
+2025-10-03 14:59:23,016 - INFO - 📥 Stdout length: 289 chars
+2025-10-03 14:59:23,016 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 14:59:23,016 - INFO - 📥 Total output length: 289 chars
+2025-10-03 14:59:23,016 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003185921.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader ...
+2025-10-03 14:59:23,019 - INFO - 📥 Output received (289 chars)
+2025-10-03 15:00:34,229 - INFO - 📤 Executing: lf search
+2025-10-03 15:00:34,229 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 15:00:34,229 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:00:34,230 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp8gbpje6z.sh
+2025-10-03 15:00:34,230 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp8gbpje6z.sh
+2025-10-03 15:00:34,231 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmppb_07bc4.bat
+2025-10-03 15:00:36,416 - INFO - 📥 Return code: 0
+2025-10-03 15:00:36,417 - INFO - 📥 Stdout length: 677 chars
+2025-10-03 15:00:36,418 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:00:36,419 - INFO - 📥 Total output length: 677 chars
+2025-10-03 15:00:36,419 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190034.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [+] Indala (len 64)  Raw: a0000000e3f00d51 [+] Fmt 26 FC: 134 Card: 47173 Parity: 11 [=]  [+] Possible de-scramble patterns [+]   Printed..........
+2025-10-03 15:00:36,421 - INFO - 📥 Output received (677 chars)
+2025-10-03 15:00:41,043 - INFO - 📤 Executing: lf indala reader
+2025-10-03 15:00:41,043 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 15:00:41,043 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:00:41,044 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpij3yupbk.sh
+2025-10-03 15:00:41,044 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpij3yupbk.sh
+2025-10-03 15:00:41,045 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp4ar8tgg3.bat
+2025-10-03 15:00:42,655 - INFO - 📥 Return code: 0
+2025-10-03 15:00:42,656 - INFO - 📥 Stdout length: 514 chars
+2025-10-03 15:00:42,656 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:00:42,656 - INFO - 📥 Total output length: 514 chars
+2025-10-03 15:00:42,656 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190041.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader [+] Indala (len 64)  Raw: a0000000e3f00d51 [+] Fmt 26 FC: 134 Card: 47173 Parity: 11 [=]  [+] Possible de-scramble patterns [+]   Printed....... __1086__  ( 0x43E ) [+]   Internal ID... 1676676433 [+]   Heden-2L...
+2025-10-03 15:00:42,658 - INFO - 📥 Output received (514 chars)
+2025-10-03 15:06:44,731 - INFO - 📤 Executing: lf indala clone --fc 134 --cn 47173
+2025-10-03 15:06:44,731 - INFO - 📤 Executing PM3 command: lf indala clone --fc 134 --cn 47173
+2025-10-03 15:06:44,731 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:06:44,732 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpst8x44kd.sh
+2025-10-03 15:06:44,732 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpst8x44kd.sh
+2025-10-03 15:06:44,732 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpfw_nd62j.bat
+2025-10-03 15:06:49,112 - INFO - 📥 Return code: 0
+2025-10-03 15:06:49,112 - INFO - 📥 Stdout length: 583 chars
+2025-10-03 15:06:49,112 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:06:49,112 - INFO - 📥 Total output length: 583 chars
+2025-10-03 15:06:49,113 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190644.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala clone --fc 134 --cn 47173  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala clone --fc 134 --cn 47173 [=] Using Indala 64 bit, FC 134 CN 47173 [=] Preparing to clone Indala 64 bit to T55x7 raw A0000000C3F00C52 [+] Blk | Data  [+] ----+------------ [+]  00 | 00081040 [+]  01 ...
+2025-10-03 15:06:49,114 - INFO - 📥 Output received (583 chars)
+2025-10-03 15:06:57,683 - INFO - 📤 Executing: lf indala reader
+2025-10-03 15:06:57,684 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 15:06:57,684 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:06:57,686 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpuabznvq2.sh
+2025-10-03 15:06:57,686 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpuabznvq2.sh
+2025-10-03 15:06:57,686 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpr303ka1g.bat
+2025-10-03 15:06:59,265 - INFO - 📥 Return code: 0
+2025-10-03 15:06:59,265 - INFO - 📥 Stdout length: 514 chars
+2025-10-03 15:06:59,265 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:06:59,265 - INFO - 📥 Total output length: 514 chars
+2025-10-03 15:06:59,265 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190657.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader [+] Indala (len 64)  Raw: a0000000c3f00c52 [+] Fmt 26 FC: 134 Card: 47173 Parity: 01 [=]  [+] Possible de-scramble patterns [+]   Printed....... __1086__  ( 0x43E ) [+]   Internal ID... 1139805266 [+]   Heden-2L...
+2025-10-03 15:06:59,266 - INFO - 📥 Output received (514 chars)
+2025-10-03 15:08:26,689 - INFO - 📤 Executing: lf t55xx detect
+2025-10-03 15:08:26,690 - INFO - 📤 Executing PM3 command: lf t55xx detect
+2025-10-03 15:08:26,690 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:08:26,691 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmppc11hsii.sh
+2025-10-03 15:08:26,691 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmppc11hsii.sh
+2025-10-03 15:08:26,692 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpumsul96b.bat
+2025-10-03 15:08:28,059 - INFO - 📥 Return code: 0
+2025-10-03 15:08:28,059 - INFO - 📥 Stdout length: 585 chars
+2025-10-03 15:08:28,059 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:08:28,059 - INFO - 📥 Total output length: 585 chars
+2025-10-03 15:08:28,059 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190826.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf t55xx detect  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf t55xx detect [=]  Chip type......... T55x7 [=]  Modulation........ PSK1 [=]  Bit rate.......... 2 - RF/32 [=]  Inverted.......... No [=]  Offset............ 59 [=]  Seq. terminator... No [=]  Block0............ 00081040 (auto ...
+2025-10-03 15:08:28,061 - INFO - 📥 Output received (585 chars)
+2025-10-03 15:08:30,946 - INFO - 📤 Executing: lf search
+2025-10-03 15:08:30,946 - INFO - 📤 Executing PM3 command: lf search
+2025-10-03 15:08:30,946 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:08:30,947 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp4np28bze.sh
+2025-10-03 15:08:30,948 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp4np28bze.sh
+2025-10-03 15:08:30,948 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpb7td2ysb.bat
+2025-10-03 15:08:33,480 - INFO - 📥 Return code: 0
+2025-10-03 15:08:33,480 - INFO - 📥 Stdout length: 665 chars
+2025-10-03 15:08:33,480 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:08:33,481 - INFO - 📥 Total output length: 665 chars
+2025-10-03 15:08:33,481 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190831.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf search  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf search  [=] Note: False Positives ARE possible [=]  [=] Checking for known tags... [=]  [+] Indala (len 64)  Raw: a0000000c3f00c52 [+] Fmt 26 FC: 134 Card: 47173 Parity: 01 [=]  [+] Possible de-scramble patterns [+]   Printed..........
+2025-10-03 15:08:33,483 - INFO - 📥 Output received (665 chars)
+2025-10-03 15:08:54,901 - INFO - 📤 Executing: lf indala reader
+2025-10-03 15:08:54,901 - INFO - 📤 Executing PM3 command: lf indala reader
+2025-10-03 15:08:54,901 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:08:54,902 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpd56a3wpj.sh
+2025-10-03 15:08:54,902 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpd56a3wpj.sh
+2025-10-03 15:08:54,902 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp4hziywz5.bat
+2025-10-03 15:08:56,476 - INFO - 📥 Return code: 0
+2025-10-03 15:08:56,476 - INFO - 📥 Stdout length: 514 chars
+2025-10-03 15:08:56,476 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:08:56,476 - INFO - 📥 Total output length: 514 chars
+2025-10-03 15:08:56,476 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003190855.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf indala reader  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf indala reader [+] Indala (len 64)  Raw: a0000000c3f00c52 [+] Fmt 26 FC: 134 Card: 47173 Parity: 01 [=]  [+] Possible de-scramble patterns [+]   Printed....... __1086__  ( 0x43E ) [+]   Internal ID... 1139805266 [+]   Heden-2L...
+2025-10-03 15:08:56,478 - INFO - 📥 Output received (514 chars)
+2025-10-03 15:25:03,040 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 15:25:07,943 - INFO - 🔍 Scanning 2 serial ports...
+2025-10-03 15:25:07,943 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 15:25:07,943 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 15:25:07,943 - INFO - ✅ Found 2 serial port(s)
+2025-10-03 15:25:24,375 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 15:25:24,376 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 15:25:24,376 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 15:25:24,376 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 15:25:24,377 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 15:25:27,781 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 15:25:27,782 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 15:25:27,782 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 15:25:27,783 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 15:25:27,783 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 15:25:27,783 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 15:25:27,800 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 15:25:27,800 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:25:27,802 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpztqinz2g.sh
+2025-10-03 15:25:27,802 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpztqinz2g.sh
+2025-10-03 15:25:27,802 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmprntxqm0y.bat
+2025-10-03 15:25:28,899 - INFO - 📥 Return code: 0
+2025-10-03 15:25:28,899 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 15:25:28,899 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:25:28,899 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 15:25:28,900 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003192528.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 15:25:28,900 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 15:25:28,900 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 15:25:29,402 - INFO - 📤 Executing: hw version
+2025-10-03 15:25:29,403 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 15:25:29,404 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:25:29,406 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpa3x6__9m.sh
+2025-10-03 15:25:29,407 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpa3x6__9m.sh
+2025-10-03 15:25:29,409 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpd29tedjv.bat
+2025-10-03 15:25:30,480 - INFO - 📥 Return code: 0
+2025-10-03 15:25:30,480 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 15:25:30,480 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:25:30,480 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 15:25:30,481 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003192529.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 15:25:30,483 - INFO - 📥 Output received (1475 chars)
+2025-10-03 15:25:39,069 - INFO - 📤 Executing: lf tune -n 1
+2025-10-03 15:25:39,069 - INFO - 📤 Executing PM3 command: lf tune -n 1
+2025-10-03 15:25:39,069 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 15:25:39,070 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpnrtymvr8.sh
+2025-10-03 15:25:39,070 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpnrtymvr8.sh
+2025-10-03 15:25:39,071 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmp035ywyo3.bat
+2025-10-03 15:25:41,677 - INFO - 📥 Return code: 0
+2025-10-03 15:25:41,677 - INFO - 📥 Stdout length: 457 chars
+2025-10-03 15:25:41,677 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 15:25:41,678 - INFO - 📥 Total output length: 457 chars
+2025-10-03 15:25:41,678 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003192539.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: lf tune -n 1  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> lf tune -n 1 [=] Measuring LF antenna at 125.00 kHz [=] Press pm3 button or <Enter> to exit [[33m=[0m] 0 mV /  0 V / 71 Vmax    [[33m=[0m] 23718 mV / 23 V / 23 Vmax    [2K  [=] Done! ...
+2025-10-03 15:25:41,679 - INFO - 📥 Output received (457 chars)
+2025-10-03 15:31:44,022 - INFO - 🔌 Disconnected from PM3
+2025-10-03 17:34:22,157 - INFO - 🚀 🔥 CyberNinjaRFID v1.0.0 started
+2025-10-03 17:34:27,296 - INFO - 🔍 Scanning 3 serial ports...
+2025-10-03 17:34:27,297 - INFO -    Found: COM1 - Communications Port (COM1)
+2025-10-03 17:34:27,297 - INFO -    Found: COM3 - USB Serial Device (COM3)
+2025-10-03 17:34:27,297 - INFO -    Found: COM5 - USB Serial Device (COM5)
+2025-10-03 17:34:27,297 - INFO - ✅ Found 3 serial port(s)
+2025-10-03 17:34:32,403 - INFO - 🔌 Connecting to PM3 on COM5...
+2025-10-03 17:34:32,403 - INFO - 🔄 Using ProxSpace environment wrapper (BEST)
+2025-10-03 17:34:32,404 - INFO - 📂 Found msys2_shell at: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 17:34:32,404 - INFO - 📂 Found PM3 dir at: D:\ProxSpace\pm3
+2025-10-03 17:34:32,405 - INFO - ✅ Using ProxSpace bash: D:\ProxSpace\msys2\msys2_shell.cmd
+2025-10-03 17:34:32,405 - INFO - ✅ PM3 directory: D:\ProxSpace\pm3
+2025-10-03 17:34:32,420 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 17:34:32,420 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 17:34:32,421 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmp6g6zxm07.sh
+2025-10-03 17:34:32,422 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmp6g6zxm07.sh
+2025-10-03 17:34:32,423 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpn9b4mujo.bat
+2025-10-03 17:34:33,515 - INFO - 📥 Return code: 0
+2025-10-03 17:34:33,515 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 17:34:33,515 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 17:34:33,516 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 17:34:33,516 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003213432.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 17:34:33,516 - INFO - 📂 Loaded 0 commands from cache
+2025-10-03 17:34:33,517 - INFO - ✅ Connected to [ Proxmark3 ]
+2025-10-03 17:34:34,017 - INFO - 📤 Executing: hw version
+2025-10-03 17:34:34,017 - INFO - 📤 Executing PM3 command: hw version
+2025-10-03 17:34:34,017 - INFO - 📂 Using ProxSpace mounted path: /pm3
+2025-10-03 17:34:34,018 - INFO - 🔧 Created bash script: C:\Users\kulbi\AppData\Local\Temp\tmpr83yot63.sh
+2025-10-03 17:34:34,018 - INFO - 🔧 Unix path: /c/Users/kulbi/AppData/Local/Temp/tmpr83yot63.sh
+2025-10-03 17:34:34,019 - INFO - 🔧 Created temp batch file: C:\Users\kulbi\AppData\Local\Temp\tmpv9gxpoiu.bat
+2025-10-03 17:34:35,089 - INFO - 📥 Return code: 0
+2025-10-03 17:34:35,089 - INFO - 📥 Stdout length: 1475 chars
+2025-10-03 17:34:35,089 - INFO - 📥 Stderr length: 0 chars
+2025-10-03 17:34:35,089 - INFO - 📥 Total output length: 1475 chars
+2025-10-03 17:34:35,090 - INFO - 📥 Preview: [=] Session log D:\ProxSpace\pm3/.proxmark3/logs/log_20251003213434.txt [+] loaded `D:\ProxSpace\pm3/.proxmark3/preferences.json` [+] execute command from commandline: hw version  [+] Using UART port COM5 [+] Communicating with PM3 over USB-CDC [usb|script] pm3 --> hw version   [ Proxmark3 ]   [ Client ]   Iceman/master/v4.20728-45-g03f4f06a3-suspect 2025-09-30 16:35:38 345249a2e   Compiler.................. MinGW-w64 13.2.0   Platform.................. Windows (64b) / x86_64   Readline support....
+2025-10-03 17:34:35,095 - INFO - 📥 Output received (1475 chars)

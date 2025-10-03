@@ -204,6 +204,11 @@ class PM3ConnectionThread(QThread):
             if "tune" in command.lower() and "-n" not in command.lower():
                 self.output.emit(f"⚠️ Warning: Tune command without -n flag may open popup window\n")
 
+            # Warn about commands that may wait for user input
+            interactive_cmds = ['sniff', 'reader']
+            if any(cmd in command.lower() for cmd in interactive_cmds):
+                self.output.emit(f"⏳ Note: This command may wait for button press or tag detection. Press PM3 button to stop.\n")
+
             # Normalize command for compatibility
             if self.compat_layer:
                 command = self.compat_layer.normalize_command(command)
@@ -219,6 +224,11 @@ class PM3ConnectionThread(QThread):
 
             if capture:
                 output = self.pm3_device.grabbed_output
+
+                # Check for truncated/timeout output
+                if len(output) < 300 and any(cmd in command.lower() for cmd in interactive_cmds):
+                    self.output.emit(f"⚠️ Command output may be incomplete. Command might be waiting for input or timed out.\n")
+
                 self.output.emit(output)
 
                 # Check antenna health for tune commands
@@ -361,7 +371,11 @@ class CyberNinjaRFIDWindow(QMainWindow):
         self.device_tab = self.create_device_info_tab()
         self.tabs.addTab(self.device_tab, "📊 Device Info")
 
-        # Tab 6: Help
+        # Tab 6: Log Viewer
+        self.log_tab = self.create_log_viewer_tab()
+        self.tabs.addTab(self.log_tab, "📋 Log Viewer")
+
+        # Tab 7: Help
         self.help_tab = self.create_help_tab()
         self.tabs.addTab(self.help_tab, "❓ Help")
 
@@ -792,6 +806,351 @@ class CyberNinjaRFIDWindow(QMainWindow):
         layout.addWidget(scripts_group)
 
         return widget
+
+    def create_log_viewer_tab(self):
+        """Create log viewer tab to view PM3 and GUI logs"""
+        widget = QWidget()
+        layout = QVBoxLayout(widget)
+
+        # Log type selector
+        selector_group = QGroupBox("📂 Log Selection")
+        selector_layout = QHBoxLayout()
+
+        selector_layout.addWidget(QLabel("📋 Log Type:"))
+
+        self.log_type_combo = QComboBox()
+        self.log_type_combo.addItem("🔧 GUI Log (cyberninja_rfid.log)", "gui_log")
+        self.log_type_combo.addItem("📟 PM3 Session Logs", "pm3_logs")
+        self.log_type_combo.addItem("💾 Dump Files (.bin/.eml/.json)", "dump_files")
+        self.log_type_combo.currentIndexChanged.connect(self.on_log_type_changed)
+        selector_layout.addWidget(self.log_type_combo)
+
+        # PM3 log file selector (hidden by default)
+        self.pm3_log_combo = QComboBox()
+        self.pm3_log_combo.setVisible(False)
+        self.pm3_log_combo.currentIndexChanged.connect(self.load_selected_pm3_log)
+        selector_layout.addWidget(self.pm3_log_combo)
+
+        # Dump file selector (hidden by default)
+        self.dump_file_combo = QComboBox()
+        self.dump_file_combo.setVisible(False)
+        self.dump_file_combo.currentIndexChanged.connect(self.load_selected_dump_file)
+        selector_layout.addWidget(self.dump_file_combo)
+
+        refresh_logs_btn = QPushButton("🔄 Refresh")
+        refresh_logs_btn.clicked.connect(self.refresh_log_viewer)
+        selector_layout.addWidget(refresh_logs_btn)
+
+        browse_btn = QPushButton("📂 Browse")
+        browse_btn.clicked.connect(self.browse_log_file)
+        selector_layout.addWidget(browse_btn)
+
+        selector_layout.addStretch()
+        selector_group.setLayout(selector_layout)
+        layout.addWidget(selector_group)
+
+        # Log content viewer
+        viewer_group = QGroupBox("📄 Log Content")
+        viewer_layout = QVBoxLayout()
+
+        self.log_viewer_text = QTextEdit()
+        self.log_viewer_text.setReadOnly(True)
+        self.log_viewer_text.setFont(QFont("Consolas", 9))
+        self.log_viewer_text.setLineWrapMode(QTextEdit.NoWrap)
+        viewer_layout.addWidget(self.log_viewer_text)
+
+        # Control buttons
+        btn_layout = QHBoxLayout()
+
+        clear_viewer_btn = QPushButton("🗑️ Clear Viewer")
+        clear_viewer_btn.clicked.connect(lambda: self.log_viewer_text.clear())
+        btn_layout.addWidget(clear_viewer_btn)
+
+        tail_btn = QPushButton("⬇️ Tail (Last 100 lines)")
+        tail_btn.clicked.connect(self.tail_log)
+        btn_layout.addWidget(tail_btn)
+
+        search_btn = QPushButton("🔍 Search")
+        search_btn.clicked.connect(self.search_log)
+        btn_layout.addWidget(search_btn)
+
+        btn_layout.addStretch()
+        viewer_layout.addLayout(btn_layout)
+
+        viewer_group.setLayout(viewer_layout)
+        layout.addWidget(viewer_group)
+
+        # Auto-load GUI log on startup
+        QTimer.singleShot(100, self.refresh_log_viewer)
+
+        return widget
+
+    def on_log_type_changed(self):
+        """Handle log type selection change"""
+        log_type = self.log_type_combo.currentData()
+
+        # Hide all selectors first
+        self.pm3_log_combo.setVisible(False)
+        self.dump_file_combo.setVisible(False)
+
+        if log_type == "pm3_logs":
+            self.pm3_log_combo.setVisible(True)
+            self.refresh_pm3_log_list()
+        elif log_type == "dump_files":
+            self.dump_file_combo.setVisible(True)
+            self.refresh_dump_file_list()
+        else:
+            self.refresh_log_viewer()
+
+    def refresh_pm3_log_list(self):
+        """Refresh the list of PM3 session logs"""
+        self.pm3_log_combo.clear()
+
+        # Look for PM3 logs in common locations
+        pm3_base = Path(__file__).parent.parent
+        possible_log_dirs = [
+            pm3_base / ".proxmark3" / "logs",
+            Path.home() / ".proxmark3" / "logs",
+            pm3_base / "proxmark3" / ".proxmark3" / "logs",
+        ]
+
+        log_files = []
+        for log_dir in possible_log_dirs:
+            if log_dir.exists():
+                log_files.extend(sorted(log_dir.glob("log_*.txt"), reverse=True))
+
+        if log_files:
+            for log_file in log_files[:50]:  # Limit to 50 most recent
+                self.pm3_log_combo.addItem(f"📄 {log_file.name}", str(log_file))
+            self.load_selected_pm3_log()
+        else:
+            self.log_viewer_text.setText("❌ No PM3 session logs found.\n\nExpected locations:\n" +
+                                        "\n".join([f"  • {d}" for d in possible_log_dirs]))
+
+    def load_selected_pm3_log(self):
+        """Load the selected PM3 log file"""
+        log_path = self.pm3_log_combo.currentData()
+        if log_path:
+            self.load_log_file(Path(log_path))
+
+    def refresh_dump_file_list(self):
+        """Refresh the list of dump files"""
+        self.dump_file_combo.clear()
+
+        # Look for dump files in common locations
+        pm3_base = Path(__file__).parent.parent
+        possible_dump_dirs = [
+            Path(__file__).parent / "dumps",
+            pm3_base / "client" / "dumps",
+            pm3_base / "proxmark3" / "client" / "dumps",
+            Path.home() / "Documents" / "PM3",
+            Path.cwd(),
+        ]
+
+        dump_files = []
+        for dump_dir in possible_dump_dirs:
+            if dump_dir.exists():
+                # Look for .bin, .eml, .json dump files
+                dump_files.extend(dump_dir.glob("*.bin"))
+                dump_files.extend(dump_dir.glob("*.eml"))
+                dump_files.extend(dump_dir.glob("*.json"))
+
+        # Remove duplicates and sort
+        dump_files = sorted(set(dump_files), key=lambda x: x.stat().st_mtime, reverse=True)
+
+        if dump_files:
+            for dump_file in dump_files[:100]:  # Limit to 100 most recent
+                file_size = dump_file.stat().st_size
+                size_str = f"{file_size}B" if file_size < 1024 else f"{file_size//1024}KB"
+                self.dump_file_combo.addItem(f"💾 {dump_file.name} ({size_str})", str(dump_file))
+            self.load_selected_dump_file()
+        else:
+            self.log_viewer_text.setText("❌ No dump files found.\n\nExpected locations:\n" +
+                                        "\n".join([f"  • {d}" for d in possible_dump_dirs]) +
+                                        "\n\nSupported formats: .bin, .eml, .json")
+
+    def load_selected_dump_file(self):
+        """Load the selected dump file"""
+        dump_path = self.dump_file_combo.currentData()
+        if dump_path:
+            self.load_dump_file(Path(dump_path))
+
+    def load_dump_file(self, dump_path: Path):
+        """Load and display a dump file with hex viewer"""
+        try:
+            if not dump_path.exists():
+                self.log_viewer_text.setText(f"❌ Dump file not found:\n{dump_path}")
+                return
+
+            file_ext = dump_path.suffix.lower()
+
+            if file_ext == '.bin':
+                # Binary file - display as hex dump
+                self.display_hex_dump(dump_path)
+            elif file_ext == '.eml':
+                # EML file - display as text (already hex format)
+                with open(dump_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                self.log_viewer_text.setPlainText(f"📄 EML Dump File: {dump_path.name}\n" + "="*60 + "\n\n" + content)
+            elif file_ext == '.json':
+                # JSON file - display formatted
+                import json
+                with open(dump_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                formatted_json = json.dumps(data, indent=2)
+                self.log_viewer_text.setPlainText(f"📄 JSON Dump File: {dump_path.name}\n" + "="*60 + "\n\n" + formatted_json)
+            else:
+                # Unknown format - try as text
+                with open(dump_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                self.log_viewer_text.setPlainText(content)
+
+            self.status_bar.showMessage(f"✅ Loaded dump: {dump_path.name}")
+
+        except Exception as e:
+            self.log_viewer_text.setText(f"❌ Error loading dump file:\n{str(e)}")
+            logger.error(f"Failed to load dump file {dump_path}: {e}")
+
+    def display_hex_dump(self, file_path: Path):
+        """Display binary file as formatted hex dump (like xxd or hexdump)"""
+        try:
+            with open(file_path, 'rb') as f:
+                data = f.read()
+
+            # Create hex dump output
+            output = []
+            output.append(f"📄 Binary Dump File: {file_path.name}")
+            output.append(f"📊 Size: {len(data)} bytes ({len(data)//4} blocks x 4 bytes)")
+            output.append("="*80)
+            output.append("")
+
+            # T55xx format: 8 blocks of 4 bytes each (32 bytes total for standard tags)
+            if len(data) == 32 or len(data) % 4 == 0:
+                output.append("🔷 T55xx Format View:")
+                output.append("")
+                output.append("Block | Hex Data | Binary                            | ASCII")
+                output.append("------+----------+-----------------------------------+------")
+
+                for block_num in range(min(8, len(data) // 4)):
+                    offset = block_num * 4
+                    block_data = data[offset:offset+4]
+
+                    hex_str = ' '.join(f'{b:02X}' for b in block_data)
+                    binary_str = ' '.join(f'{b:08b}' for b in block_data)
+                    ascii_str = ''.join(chr(b) if 32 <= b < 127 else '.' for b in block_data)
+
+                    output.append(f"  {block_num}   | {hex_str} | {binary_str[:33]:<33} | {ascii_str}")
+
+                output.append("")
+
+            # Standard hex dump view
+            output.append("🔷 Hex Dump View:")
+            output.append("")
+
+            bytes_per_line = 16
+            for i in range(0, len(data), bytes_per_line):
+                chunk = data[i:i+bytes_per_line]
+
+                # Offset
+                offset_str = f"{i:08X}"
+
+                # Hex values
+                hex_str = ' '.join(f'{b:02X}' for b in chunk)
+                hex_str = hex_str.ljust(bytes_per_line * 3 - 1)  # Pad to align
+
+                # ASCII representation
+                ascii_str = ''.join(chr(b) if 32 <= b < 127 else '.' for b in chunk)
+
+                output.append(f"{offset_str}  {hex_str}  |{ascii_str}|")
+
+            self.log_viewer_text.setPlainText('\n'.join(output))
+
+        except Exception as e:
+            self.log_viewer_text.setText(f"❌ Error reading binary file:\n{str(e)}")
+
+    def refresh_log_viewer(self):
+        """Refresh the log viewer content"""
+        log_type = self.log_type_combo.currentData()
+
+        if log_type == "gui_log":
+            # Load GUI log
+            log_file = Path(__file__).parent / "logs" / "cyberninja_rfid.log"
+            self.load_log_file(log_file)
+        elif log_type == "pm3_logs":
+            self.refresh_pm3_log_list()
+
+    def load_log_file(self, log_path: Path):
+        """Load and display a log file"""
+        try:
+            if not log_path.exists():
+                self.log_viewer_text.setText(f"❌ Log file not found:\n{log_path}")
+                return
+
+            # Read the log file
+            with open(log_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+            # Display in viewer
+            self.log_viewer_text.setPlainText(content)
+
+            # Auto-scroll to bottom
+            cursor = self.log_viewer_text.textCursor()
+            cursor.movePosition(QTextCursor.End)
+            self.log_viewer_text.setTextCursor(cursor)
+
+            self.status_bar.showMessage(f"✅ Loaded log: {log_path.name}")
+
+        except Exception as e:
+            self.log_viewer_text.setText(f"❌ Error loading log file:\n{str(e)}")
+            logger.error(f"Failed to load log file {log_path}: {e}")
+
+    def browse_log_file(self):
+        """Browse for a log file to open"""
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Open Log File",
+            str(Path.home()),
+            "Log Files (*.log *.txt);;All Files (*.*)"
+        )
+
+        if file_path:
+            self.load_log_file(Path(file_path))
+
+    def tail_log(self):
+        """Show last 100 lines of current log"""
+        current_text = self.log_viewer_text.toPlainText()
+        if current_text:
+            lines = current_text.split('\n')
+            tail_lines = lines[-100:]
+            self.log_viewer_text.setPlainText('\n'.join(tail_lines))
+
+            # Scroll to bottom
+            cursor = self.log_viewer_text.textCursor()
+            cursor.movePosition(QTextCursor.End)
+            self.log_viewer_text.setTextCursor(cursor)
+
+    def search_log(self):
+        """Search for text in the log"""
+        search_text, ok = QInputDialog.getText(
+            self,
+            "Search Log",
+            "Enter search term:",
+            QLineEdit.Normal,
+            ""
+        )
+
+        if ok and search_text:
+            # Find and highlight the search term
+            cursor = self.log_viewer_text.textCursor()
+            cursor.movePosition(QTextCursor.Start)
+            self.log_viewer_text.setTextCursor(cursor)
+
+            # Find first occurrence
+            if self.log_viewer_text.find(search_text):
+                self.status_bar.showMessage(f"✅ Found: {search_text}")
+            else:
+                self.status_bar.showMessage(f"❌ Not found: {search_text}")
+                QMessageBox.information(self, "Search", f"Text not found: {search_text}")
 
     def create_help_tab(self):
         """Create help/how-to tab"""
@@ -1442,12 +1801,19 @@ class CyberNinjaRFIDWindow(QMainWindow):
         if not text or not text.strip():
             return
 
+        # Detect empty tags
+        empty_tag_msg = self.detect_empty_tag(text)
+
         # Colorize the output based on content
         colored_html = self.colorize_output(text)
 
         # Batch update to reduce redraws (better performance)
         self.output_text.setUpdatesEnabled(False)
         self.output_text.append(colored_html)
+
+        # Add empty tag notification if detected
+        if empty_tag_msg:
+            self.output_text.append(f'<span style="color: #ffff00; font-weight: bold;">{empty_tag_msg}</span>')
 
         # Auto-scroll to bottom
         cursor = self.output_text.textCursor()
@@ -1464,9 +1830,76 @@ class CyberNinjaRFIDWindow(QMainWindow):
 
         # Also update HF/LF consoles if they exist (async to prevent lag)
         if hasattr(self, 'hf_output_text'):
-            QTimer.singleShot(0, lambda: self.hf_output_text.append(colored_html))
+            self.hf_output_text.append(colored_html)
+            if empty_tag_msg:
+                self.hf_output_text.append(f'<span style="color: #ffff00; font-weight: bold;">{empty_tag_msg}</span>')
         if hasattr(self, 'lf_output_text'):
-            QTimer.singleShot(0, lambda: self.lf_output_text.append(colored_html))
+            self.lf_output_text.append(colored_html)
+            if empty_tag_msg:
+                self.lf_output_text.append(f'<span style="color: #ffff00; font-weight: bold;">{empty_tag_msg}</span>')
+
+    def detect_empty_tag(self, text: str) -> str:
+        """Detect if a tag is empty/blank and return notification message"""
+        import re
+
+        # Pattern 1: Check for "No known tags found" from lf/hf search
+        if 'no known' in text.lower() and 'tags found' in text.lower():
+            return "\n❌ NO TAG DETECTED - Place tag on antenna or tag is not a known type\n"
+
+        # Pattern 2: Check for empty T55xx blocks (all zeros or no data)
+        # Look for hex data patterns like "00000000" or empty table rows
+        if 'blk' in text.lower() and ('hex data' in text.lower() or 'binary' in text.lower()):
+            # Count how many all-zero blocks we see
+            zero_blocks = len(re.findall(r'\|\s*00000000\s*\|', text))
+
+            # If we see multiple zero blocks (3+), likely empty tag
+            if zero_blocks >= 3:
+                return "\n⚠️  EMPTY TAG DETECTED - Tag appears to be blank (all blocks are 00000000)\n"
+
+        # Pattern 3: Check for "No tag found" or similar messages
+        if any(phrase in text.lower() for phrase in ['no tag found', 'no tags found', 'no card found']):
+            return "\n❌ NO TAG DETECTED - Place tag on antenna\n"
+
+        # Pattern 4: Check for empty read output (table with no data rows)
+        # Look for table separator line (multiple dashes with pipes)
+        if re.search(r'----\+.*\+.*-+', text):
+            # Found table header, check if there's data after it
+            lines = text.split('\n')
+
+            # Find the separator line index
+            separator_idx = -1
+            for i, line in enumerate(lines):
+                if re.match(r'.*----\+.*\+.*-+', line):
+                    separator_idx = i
+                    break
+
+            if separator_idx >= 0:
+                # Check lines after separator for actual data
+                lines_after = lines[separator_idx + 1:]
+                has_data = False
+
+                for line in lines_after:
+                    # Look for lines with hex data (pipes with content between them)
+                    if '|' in line and re.search(r'\|\s*[0-9A-Fa-f]+\s*\|', line):
+                        has_data = True
+                        break
+
+                if not has_data and len(lines_after) < 3:
+                    return "\n⚠️  EMPTY/UNREADABLE TAG - No data could be read from tag\n"
+
+        # Pattern 5: Check for EM410x with all zeros
+        if 'em' in text.lower() and re.search(r'0{10,}', text):  # 10+ zeros in a row
+            return "\n⚠️  EMPTY EM410x TAG - Tag ID is all zeros (blank tag)\n"
+
+        # Pattern 6: Check for "Could not detect modulation" - often means blank T55xx
+        if 'could not detect modulation' in text.lower():
+            return "\n⚠️  BLANK T55xx TAG - Cannot detect modulation (tag may be empty or needs configuration)\n"
+
+        # Pattern 7: Check for "Couldn't identify a chipset"
+        if "couldn't identify" in text.lower() and 'chipset' in text.lower():
+            return "\n⚠️  UNKNOWN/EMPTY TAG - Cannot identify tag type (may be blank, proprietary, or not supported)\n"
+
+        return None
 
     def colorize_output(self, text: str) -> str:
         """Colorize text output Linux terminal style"""
