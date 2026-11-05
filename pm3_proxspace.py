@@ -41,6 +41,7 @@ class PM3ProxSpace:
             Path("D:/ProxSpace/msys2/msys2_shell.cmd"),
             Path("C:/Claude-Terminal/ProxSpace/msys2/msys2_shell.cmd"),
             Path("D:/Claude-Terminal/ProxSpace/msys2/msys2_shell.cmd"),
+            Path("D:/Archive-Projects/ProxSpace/msys2/msys2_shell.cmd"),
             Path(__file__).parent.parent.parent / "msys2" / "msys2_shell.cmd",
         ]
 
@@ -58,6 +59,7 @@ class PM3ProxSpace:
             Path("D:/ProxSpace/pm3"),
             Path("C:/Claude-Terminal/ProxSpace/pm3"),
             Path("D:/Claude-Terminal/ProxSpace/pm3"),
+            Path("D:/Archive-Projects/ProxSpace/pm3"),
             Path(__file__).parent.parent,
         ]
 
@@ -70,7 +72,7 @@ class PM3ProxSpace:
 
         return None
 
-    def console(self, command: str, capture=True, quiet=True):
+    def console(self, command: str, capture=True, quiet=True, _attempt: int = 1):
         """
         Execute a command on PM3 via ProxSpace bash
         """
@@ -147,6 +149,16 @@ class PM3ProxSpace:
             logger.info(f"📥 Stdout length: {len(output)} chars")
             logger.info(f"📥 Stderr length: {len(errors)} chars")
             logger.info(f"📥 Total output length: {len(full_output)} chars")
+
+            # Auto-retry once on transient ProxSpace/pm3 crash:
+            # segfault (return code 139) or access violation (3221225477 / 0xC0000005)
+            # with no real PM3 output. These are known flaky and usually work on a 2nd try.
+            crash_codes = (139, 3221225477)
+            has_real_output = ('[+]' in full_output) or ('[=]' in full_output) or ('pm3 -->' in full_output)
+            if process.returncode in crash_codes and not has_real_output and _attempt < 2:
+                logger.warning(f"Transient crash (rc {process.returncode}) with no output - retrying once...")
+                time.sleep(0.5)
+                return self.console(command, capture=capture, quiet=quiet, _attempt=_attempt + 1)
 
             # Handle return codes
             # Return code 127 with output means command executed but bash wrapper had issues

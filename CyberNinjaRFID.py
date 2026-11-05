@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 🔥 CyberNinjaRFID - Proxmark3 Iceman GUI 🔥
 A cyberpunk-themed GUI for Proxmark3 Iceman firmware
@@ -539,12 +539,59 @@ class CyberNinjaRFIDWindow(QMainWindow):
         mifare_group.setLayout(mifare_layout)
         left_layout.addWidget(mifare_group)
 
+        # Clone / Magic Tools group
+        clone_group = QGroupBox("Clone / Magic Tools")
+        clone_layout = QGridLayout()
+
+        mf_clone_btn = QPushButton("HF Clone (MIFARE)")
+        mf_clone_btn.setMinimumHeight(40)
+        mf_clone_btn.clicked.connect(self.hf_mf_clone)
+        clone_layout.addWidget(mf_clone_btn, 0, 0)
+
+        iclass_clone_btn = QPushButton("iClass Clone")
+        iclass_clone_btn.setMinimumHeight(40)
+        iclass_clone_btn.clicked.connect(self.hf_iclass_clone)
+        clone_layout.addWidget(iclass_clone_btn, 0, 1)
+
+        wipe_gen1_btn = QPushButton("MIFARE Wipe (Gen1a)")
+        wipe_gen1_btn.setMinimumHeight(40)
+        wipe_gen1_btn.clicked.connect(lambda: self.quick_command("hf mf cwipe"))
+        clone_layout.addWidget(wipe_gen1_btn, 1, 0)
+
+        wipe_gen2_btn = QPushButton("MIFARE Wipe (Gen2)")
+        wipe_gen2_btn.setMinimumHeight(40)
+        wipe_gen2_btn.clicked.connect(lambda: self.quick_command("hf mf wipe --gen2"))
+        clone_layout.addWidget(wipe_gen2_btn, 1, 1)
+
+        gen2_write_btn = QPushButton("Gen2 Write Block0")
+        gen2_write_btn.setMinimumHeight(40)
+        gen2_write_btn.clicked.connect(self.hf_mf_gen2_block0)
+        clone_layout.addWidget(gen2_write_btn, 2, 0)
+
+        set_uid_btn = QPushButton("Set UID / SAK / ATQA")
+        set_uid_btn.setMinimumHeight(40)
+        set_uid_btn.clicked.connect(self.hf_mf_set_uid_sak_atqa)
+        clone_layout.addWidget(set_uid_btn, 2, 1)
+
+        sak_btn = QPushButton("Change SAK")
+        sak_btn.setMinimumHeight(40)
+        sak_btn.clicked.connect(self.hf_mf_change_sak)
+        clone_layout.addWidget(sak_btn, 3, 0)
+
+        atqa_btn = QPushButton("Change ATQA")
+        atqa_btn.setMinimumHeight(40)
+        atqa_btn.clicked.connect(self.hf_mf_change_atqa)
+        clone_layout.addWidget(atqa_btn, 3, 1)
+
+        clone_group.setLayout(clone_layout)
+        left_layout.addWidget(clone_group)
+
         # List group
         list_group = QGroupBox("📝 Trace Analysis")
         list_layout = QVBoxLayout()
         list_btn = QPushButton("📝 HF List (ISO14443a)")
         list_btn.setMinimumHeight(40)
-        list_btn.clicked.connect(lambda: self.quick_command("hf list 14a"))
+        list_btn.clicked.connect(lambda: self.quick_command("trace list -t 14a"))
         list_layout.addWidget(list_btn)
         list_group.setLayout(list_layout)
         left_layout.addWidget(list_group)
@@ -660,7 +707,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
 
         t55_config_btn = QPushButton("⚙️ T55xx Config Block")
         t55_config_btn.setMinimumHeight(40)
-        t55_config_btn.clicked.connect(lambda: self.quick_command("lf t55xx write --blk 1 --data 000880E0"))
+        t55_config_btn.clicked.connect(lambda: self.quick_command("lf t55xx write -b 0 -d 000880E0"))
         writer_layout.addWidget(t55_config_btn, 1, 1)
 
         writer_group.setLayout(writer_layout)
@@ -672,7 +719,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
 
         em_clone_btn = QPushButton("🎫 EM410x Clone")
         em_clone_btn.setMinimumHeight(40)
-        em_clone_btn.clicked.connect(lambda: self.quick_command("lf em 410x clone --to t55xx"))
+        em_clone_btn.clicked.connect(lambda: self.em410x_write())
         clone_layout.addWidget(em_clone_btn, 0, 0)
 
         hid_clone_btn = QPushButton("🏢 HID Clone")
@@ -694,6 +741,16 @@ class CyberNinjaRFIDWindow(QMainWindow):
         indala_heden_btn.setMinimumHeight(40)
         indala_heden_btn.clicked.connect(self.indala_clone_heden)
         clone_layout.addWidget(indala_heden_btn, 2, 0)
+
+        paradox_clone_btn = QPushButton("🏢 Paradox Clone")
+        paradox_clone_btn.setMinimumHeight(40)
+        paradox_clone_btn.clicked.connect(self.paradox_clone)
+        clone_layout.addWidget(paradox_clone_btn, 2, 1)
+
+        pyramid_clone_btn = QPushButton("📋 Pyramid Clone")
+        pyramid_clone_btn.setMinimumHeight(40)
+        pyramid_clone_btn.clicked.connect(self.pyramid_clone)
+        clone_layout.addWidget(pyramid_clone_btn, 3, 0)
 
         clone_group.setLayout(clone_layout)
         left_layout.addWidget(clone_group)
@@ -726,12 +783,12 @@ class CyberNinjaRFIDWindow(QMainWindow):
 
         list_em_btn = QPushButton("📝 List EM")
         list_em_btn.setMinimumHeight(40)
-        list_em_btn.clicked.connect(lambda: self.quick_command("lf list em"))
+        list_em_btn.clicked.connect(lambda: self.quick_command("trace list -t raw"))
         list_layout.addWidget(list_em_btn)
 
         list_hid_btn = QPushButton("📝 List HID")
         list_hid_btn.setMinimumHeight(40)
-        list_hid_btn.clicked.connect(lambda: self.quick_command("lf list hid"))
+        list_hid_btn.clicked.connect(lambda: self.quick_command("trace list -t raw"))
         list_layout.addWidget(list_hid_btn)
 
         list_group.setLayout(list_layout)
@@ -1638,13 +1695,13 @@ class CyberNinjaRFIDWindow(QMainWindow):
         """EM410x Write with HEX ID input"""
         hex_id, ok = QInputDialog.getText(
             self,
-            "EM410x Write",
-            "Enter EM410x HEX ID (10 digits):",
+            "EM410x Clone",
+            "Enter EM410x HEX ID (10 hex digits / 5 bytes):",
             QLineEdit.Normal,
             ""
         )
         if ok and hex_id:
-            command = f"lf em 410x write {hex_id}"
+            command = f"lf em 410x clone --id {hex_id}"
             self.quick_command(command)
 
     def t55xx_write(self):
@@ -1667,7 +1724,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
             ""
         )
         if ok and data:
-            command = f"lf t55xx write --blk {block} --data {data}"
+            command = f"lf t55xx write -b {block} -d {data}"
             self.quick_command(command)
 
     def indala_clone_raw(self):
@@ -1680,7 +1737,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
             ""
         )
         if ok and raw:
-            command = f"lf indala clone -r {raw}"
+            command = f"lf indala clone --raw {raw}"
             self.quick_command(command)
 
     def indala_clone_fc_cn(self):
@@ -1742,12 +1799,276 @@ class CyberNinjaRFIDWindow(QMainWindow):
             command = f"lf hid clone --fc {fc} --cn {cn}"
             self.quick_command(command)
 
+    def paradox_clone(self):
+        """Paradox clone by Facility Code + Card Number"""
+        fc, ok = QInputDialog.getText(
+            self,
+            "Paradox Clone",
+            "Enter Facility Code:",
+            QLineEdit.Normal,
+            ""
+        )
+        if not ok or not fc:
+            return
+        cn, ok = QInputDialog.getText(
+            self,
+            "Paradox Clone",
+            "Enter Card Number:",
+            QLineEdit.Normal,
+            ""
+        )
+        if ok and cn:
+            self.quick_command(f"lf paradox clone --fc {fc} --cn {cn}")
+
+    def pyramid_clone(self):
+        """Pyramid clone by RAW hex"""
+        raw, ok = QInputDialog.getText(
+            self,
+            "Pyramid Clone",
+            "Enter RAW HEX (from lf search):",
+            QLineEdit.Normal,
+            ""
+        )
+        if ok and raw:
+            self.quick_command(f"lf pyramid clone --raw {raw}")
+
+    def hf_mf_clone(self):
+        """HF MIFARE Clone - write dump to gen1a (cload), gen2/CUID (restore), or GDM (gload)"""
+        filename, ok = QInputDialog.getText(
+            self,
+            "HF Clone (MIFARE)",
+            "Enter MIFARE dump filename (from autopwn/dump):",
+            QLineEdit.Normal,
+            "hf-mf-dump.bin"
+        )
+        if not ok or not filename:
+            return
+
+        kind, ok = QInputDialog.getItem(
+            self,
+            "HF Clone (MIFARE)",
+            "Blank card type:",
+            ["Gen1a magic (hf mf cload)", "Gen2 / CUID (hf mf restore --force)", "GDM / USCUID (hf mf gload)"],
+            1,
+            False
+        )
+        if not ok:
+            return
+        if kind.startswith("Gen1a"):
+            self.quick_command(f"hf mf cload -f {filename}")
+            return
+        if kind.startswith("GDM"):
+            self.quick_command(f"hf mf gload -f {filename}")
+            return
+        # Gen2 / CUID: pick size + optional UID (current Iceman flag syntax)
+        size, ok = QInputDialog.getItem(
+            self, "HF Clone (MIFARE)", "Card size:", ["1K", "4K"], 0, False
+        )
+        if not ok:
+            return
+        uid, ok = QInputDialog.getText(
+            self, "HF Clone (MIFARE)",
+            "UID to force (8 hex for 4b, blank = use dump block0):",
+            QLineEdit.Normal, ""
+        )
+        if not ok:
+            return
+        sz = "--1k" if size == "1K" else "--4k"
+        cmd = f"hf mf restore {sz} --force -f {filename}"
+        if uid.strip():
+            cmd += f" -u {uid.strip()}"
+        self.quick_command(cmd)
+
+    def hf_iclass_clone(self):
+        """iClass dump + restore + verify (user's block 6-18 key workflow)"""
+        mode, ok = QInputDialog.getItem(
+            self,
+            "iClass Clone",
+            "Step:",
+            [
+                "1) Dump original (hf iclass dump --ki 0)",
+                "2) Restore dump to blank (blocks 6-18)",
+                "3) Verify clone (read block 6)",
+            ],
+            0,
+            False
+        )
+        if not ok:
+            return
+
+        if mode.startswith("1)"):
+            self.quick_command("hf iclass dump --ki 0")
+            return
+
+        key, ok = QInputDialog.getText(
+            self,
+            "iClass Clone",
+            "Block key (hex):",
+            QLineEdit.Normal,
+            "AEA684A6DAB23278"
+        )
+        if not ok or not key:
+            return
+
+        if mode.startswith("3)"):
+            self.quick_command(f"hf iclass rdbl --blk 6 -k {key}")
+            return
+
+        filename, ok = QInputDialog.getText(
+            self,
+            "iClass Clone",
+            "Dump filename to restore:",
+            QLineEdit.Normal,
+            "hf-iclass-dump.bin"
+        )
+        if ok and filename:
+            self.quick_command(f"hf iclass restore -f {filename} --first 6 --last 18 -k {key}")
+
+    def hf_mf_gen2_block0(self):
+        """Gen2/CUID: write full manufacturer block0 (UID+BCC+SAK+ATQA+...)"""
+        data, ok = QInputDialog.getText(
+            self,
+            "Gen2 Write Block0",
+            "Block0 hex (32 hex chars). Example 1k:\n11223344440804006263646566676869\n(UID+BCC+SAK+ATQA+manuf)",
+            QLineEdit.Normal,
+            ""
+        )
+        if not ok or not data:
+            return
+        key, ok = QInputDialog.getText(
+            self,
+            "Gen2 Write Block0",
+            "Key A (12 hex):",
+            QLineEdit.Normal,
+            "FFFFFFFFFFFF"
+        )
+        if ok and key:
+            self.quick_command(f"hf mf wrbl --blk 0 -k {key} -d {data} --force")
+
+    def hf_mf_set_uid_sak_atqa(self):
+        """Set UID + SAK + ATQA on Gen1a via csetuid"""
+        uid, ok = QInputDialog.getText(self, "Set UID/SAK/ATQA", "UID (8 hex for 4-byte):", QLineEdit.Normal, "")
+        if not ok or not uid:
+            return
+        sak, ok = QInputDialog.getText(self, "Set UID/SAK/ATQA", "SAK (2 hex, e.g. 08):", QLineEdit.Normal, "08")
+        if not ok or not sak:
+            return
+        atqa, ok = QInputDialog.getText(self, "Set UID/SAK/ATQA", "ATQA (4 hex, e.g. 0004):", QLineEdit.Normal, "0004")
+        if not ok or not atqa:
+            return
+        kind, ok = QInputDialog.getItem(
+            self,
+            "Set UID/SAK/ATQA",
+            "Card type:",
+            ["Gen1a (hf mf csetuid)", "Gen2 write block0 helper (builds block0)"],
+            0,
+            False
+        )
+        if not ok:
+            return
+        if kind.startswith("Gen1a"):
+            self.quick_command(f"hf mf csetuid -u {uid} -a {atqa} -s {sak}")
+        else:
+            # Build 4b UID block0: UID + BCC + SAK + ATQA + padding
+            u = uid.strip().replace(" ", "")
+            if len(u) != 8:
+                QMessageBox.warning(self, "Set UID/SAK/ATQA", "Gen2 helper needs 4-byte UID (8 hex chars).")
+                return
+            try:
+                b = bytes.fromhex(u)
+                bcc = f"{b[0]^b[1]^b[2]^b[3]:02X}"
+            except ValueError:
+                QMessageBox.warning(self, "Set UID/SAK/ATQA", "Invalid hex.")
+                return
+            # ATQA in block0 is little-endian bytes of ATQA value
+            a = atqa.strip().replace(" ", "")
+            s = sak.strip().replace(" ", "")
+            # block0 ATQA stored as low,high matching notes: 0400 for ATQA 0004
+            if len(a) == 4:
+                atqa_blk = a[2:4] + a[0:2]
+            else:
+                atqa_blk = a
+            block0 = f"{u}{bcc}{s}{atqa_blk}6263646566676869"
+            self.quick_command(f"hf mf wrbl --blk 0 -k FFFFFFFFFFFF -d {block0} --force")
+
+    def hf_mf_change_sak(self):
+        """Change SAK only (asks UID+ATQA too so Gen1a csetuid stays valid)"""
+        uid, ok = QInputDialog.getText(self, "Change SAK", "Current UID (8 hex):", QLineEdit.Normal, "")
+        if not ok or not uid:
+            return
+        sak, ok = QInputDialog.getText(self, "Change SAK", "New SAK (2 hex, e.g. 08 or 28):", QLineEdit.Normal, "08")
+        if not ok or not sak:
+            return
+        atqa, ok = QInputDialog.getText(self, "Change SAK", "ATQA to keep (4 hex, e.g. 0004):", QLineEdit.Normal, "0004")
+        if not ok or not atqa:
+            return
+        kind, ok = QInputDialog.getItem(
+            self,
+            "Change SAK",
+            "Card type:",
+            ["Gen1a (csetuid)", "Gen2 (wrbl block0)"],
+            0,
+            False
+        )
+        if not ok:
+            return
+        if kind.startswith("Gen1a"):
+            self.quick_command(f"hf mf csetuid -u {uid} -a {atqa} -s {sak}")
+        else:
+            u = uid.strip().replace(" ", "")
+            try:
+                b = bytes.fromhex(u)
+                bcc = f"{b[0]^b[1]^b[2]^b[3]:02X}"
+            except ValueError:
+                QMessageBox.warning(self, "Change SAK", "Invalid UID hex.")
+                return
+            a = atqa.strip().replace(" ", "")
+            atqa_blk = a[2:4] + a[0:2] if len(a) == 4 else a
+            block0 = f"{u}{bcc}{sak.strip()}{atqa_blk}6263646566676869"
+            self.quick_command(f"hf mf wrbl --blk 0 -k FFFFFFFFFFFF -d {block0} --force")
+
+    def hf_mf_change_atqa(self):
+        """Change ATQA only (asks UID+SAK too)"""
+        uid, ok = QInputDialog.getText(self, "Change ATQA", "Current UID (8 hex):", QLineEdit.Normal, "")
+        if not ok or not uid:
+            return
+        atqa, ok = QInputDialog.getText(self, "Change ATQA", "New ATQA (4 hex, e.g. 0004 or 0044):", QLineEdit.Normal, "0004")
+        if not ok or not atqa:
+            return
+        sak, ok = QInputDialog.getText(self, "Change ATQA", "SAK to keep (2 hex, e.g. 08):", QLineEdit.Normal, "08")
+        if not ok or not sak:
+            return
+        kind, ok = QInputDialog.getItem(
+            self,
+            "Change ATQA",
+            "Card type:",
+            ["Gen1a (csetuid)", "Gen2 (wrbl block0)"],
+            0,
+            False
+        )
+        if not ok:
+            return
+        if kind.startswith("Gen1a"):
+            self.quick_command(f"hf mf csetuid -u {uid} -a {atqa} -s {sak}")
+        else:
+            u = uid.strip().replace(" ", "")
+            try:
+                b = bytes.fromhex(u)
+                bcc = f"{b[0]^b[1]^b[2]^b[3]:02X}"
+            except ValueError:
+                QMessageBox.warning(self, "Change ATQA", "Invalid UID hex.")
+                return
+            a = atqa.strip().replace(" ", "")
+            atqa_blk = a[2:4] + a[0:2] if len(a) == 4 else a
+            block0 = f"{u}{bcc}{sak.strip()}{atqa_blk}6263646566676869"
+            self.quick_command(f"hf mf wrbl --blk 0 -k FFFFFFFFFFFF -d {block0} --force")
+
     def t55xx_read_blocks(self):
         """Read all T55xx blocks (0-7)"""
         self.log_output("\n[*] 📖 T55xx Block Dump Starting...\n")
 
         for block in range(8):
-            command = f"lf t55xx read --blk {block}"
+            command = f"lf t55xx read -b {block}"
             self.command_input.setText(command)
             self.execute_command()
             # Add a small delay to prevent overwhelming the PM3
@@ -1766,7 +2087,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
             "dump.bin"
         )
         if ok and filename:
-            command = f"lf t55xx dump {filename}"
+            command = f"lf t55xx dump -f {filename}"
             self.quick_command(command)
 
     def t55xx_restore(self):
@@ -1779,7 +2100,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
             "dump.bin"
         )
         if ok and filename:
-            command = f"lf t55xx restore {filename}"
+            command = f"lf t55xx restore -f {filename}"
             self.quick_command(command)
 
     def lf_simulate(self):
@@ -1792,7 +2113,7 @@ class CyberNinjaRFIDWindow(QMainWindow):
             "dump.bin"
         )
         if ok and filename:
-            command = f"lf sim {filename}"
+            command = f"data load -f {filename}; lf sim"
             self.quick_command(command)
 
     def log_output(self, text: str):

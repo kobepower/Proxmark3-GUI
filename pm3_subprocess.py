@@ -70,7 +70,7 @@ class PM3Subprocess:
 
         return None
 
-    def console(self, command: str, capture=True, quiet=True):
+    def console(self, command: str, capture=True, quiet=True, _attempt: int = 1):
         """
         Execute a command on PM3 via subprocess
         """
@@ -145,6 +145,14 @@ class PM3Subprocess:
                 # Show first 200 chars of output
                 preview = full_output[:200].replace('\n', ' ')
                 logger.info(f"📥 Output preview: {preview}...")
+
+            # Auto-retry once on transient crash (segfault 139 / access violation 3221225477)
+            crash_codes = (139, 3221225477)
+            has_real_output = ('[+]' in full_output) or ('[=]' in full_output) or ('pm3 -->' in full_output)
+            if process.returncode in crash_codes and not has_real_output and _attempt < 2:
+                logger.warning(f"Transient crash (rc {process.returncode}) with no output - retrying once...")
+                time.sleep(0.5)
+                return self.console(command, capture=capture, quiet=quiet, _attempt=_attempt + 1)
 
             return process.returncode == 0
 

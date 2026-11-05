@@ -1,0 +1,13 @@
+﻿__pycache__/
+*.pyc
+*.bak
+*.bak[0-9]
+*.bak[0-9][0-9]
+*.bak*
+config.json.bak
+logs/*.log
+data/
+_patch*.py
+_revert_autopwn.py
+_check_revert.py
+_snip.txt
